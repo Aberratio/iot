@@ -3,6 +3,10 @@
   --primary-color: #00695c;
 }
 
+.mt-2 {
+  margin-top: 50px !important;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -98,6 +102,7 @@ img {
   margin: auto;
   margin-bottom: 30px;
 }
+
 .form-switch__wrapper p {
   display: inline;
   font-size: 16px;
@@ -184,6 +189,7 @@ input:checked + .slider:before {
   position: fixed;
   width: 100%;
   font-size: 14px;
+  z-index: 200;
 }
 
 .navbar .flex {
@@ -228,4 +234,25 @@ input:checked + .slider:before {
   margin: auto;
   margin-bottom: 40px;
   margin-top: 40px;
+}
+
+/* Device */
+
+.form-davice__wrapper {
+  background-color: rgba(0, 105, 92, 0.38);
+  padding: 20px;
+  border-radius: 5px;
+  max-width: fit-content;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.form-davice-name__wrapper {
+  width: 270px;
+  height: 20px;
+  display: flex;
+  margin: auto;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  color: var(--primary-color);
 }

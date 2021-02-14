@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>IoT</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="container flex">
+        <a href="settings.html"><h1 class="logo">Czujnik 1</h1></a>
+      </div>
+    </div>
+
+    <!-- Devices Settings -->
+    <section class="menu">
+      <div class="settings-container">
+        <h2 class="form-name">Ustawienia czujników</h2>
+        <form>
+          <!-- ---------------- device - begin ----------------------------- -->
+          <div class="device">
+            <h3 class="form-davice-name__wrapper">temperatura</h3>
+            <div class="form-davice__wrapper">
+              <div class="form-control form-switch__wrapper">
+                <p>Wyświetl na ekranie</p>
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div class="form-control">
+                <input
+                  type="text"
+                  name="temp_min"
+                  placeholder=" alert poniżej"
+                  required
+                  autocomplete="off"
+                />
+              </div>
+              <div class="form-control">
+                <input
+                  type="text"
+                  name="temp_max"
+                  placeholder=" alert powyżej"
+                  required
+                  autocomplete="off"
+                />
+              </div>
+              <div class="form-control form-switch__wrapper">
+                <p>Alert na ekranie</p>
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div class="form-control form-switch__wrapper">
+                <p>Alert na mail</p>
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- ---------------- device - end ----------------------------- -->
+
+          <div class="device">
+            <h3 class="form-davice-name__wrapper">wilgotność</h3>
+            <div class="form-davice__wrapper">
+              <div class="form-control form-switch__wrapper">
+                <p>Wyświetl na ekranie</p>
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div class="form-control">
+                <input
+                  type="text"
+                  name="temp_min"
+                  placeholder=" alert poniżej"
+                  required
+                  autocomplete="off"
+                />
+              </div>
+              <div class="form-control">
+                <input
+                  type="text"
+                  name="temp_max"
+                  placeholder=" alert powyżej"
+                  required
+                  autocomplete="off"
+                />
+              </div>
+              <div class="form-control form-switch__wrapper">
+                <p>Alert na ekranie</p>
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div class="form-control form-switch__wrapper">
+                <p>Alert na mail</p>
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <input type="submit" value="Aktualizuj" class="btn mt-2" />
+        </form>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div class="container flex"></div>
+    </div>
+  </body>
+</html>
