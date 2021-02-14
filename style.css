@@ -76,8 +76,29 @@ img {
   border-radius: 5px;
 }
 
-.btn:hover {
+.btn:hover,
+.image_btn:hover {
   transform: scale(0.96);
+}
+
+.image_btn {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 16px;
+  display: inline-block;
+  margin: auto;
+  margin-bottom: 20px;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.image_on_button {
+  width: 20px;
+  height: 20px;
 }
 
 /* ------ forms ------ */
@@ -103,7 +124,7 @@ img {
   margin-bottom: 30px;
 }
 
-.form-switch__wrapper p {
+.form__wrapper p {
   display: inline;
   font-size: 16px;
   padding-top: 0px;
@@ -111,7 +132,7 @@ img {
   vertical-align: middle;
 }
 
-.form-switch__wrapper {
+.form__wrapper {
   width: 270px;
   height: 20px;
   display: flex;
@@ -119,6 +140,16 @@ img {
   margin: auto;
   margin-bottom: 20px;
   justify-content: space-between;
+}
+
+.form-name__wrapper {
+  width: 270px;
+  height: 20px;
+  display: flex;
+  margin: auto;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  color: var(--primary-color);
 }
 
 /* switch */
@@ -238,7 +269,7 @@ input:checked + .slider:before {
 
 /* Device */
 
-.form-davice__wrapper {
+.form-device__wrapper {
   background-color: rgba(0, 105, 92, 0.38);
   padding: 20px;
   border-radius: 5px;
@@ -247,12 +278,17 @@ input:checked + .slider:before {
   margin-bottom: 30px;
 }
 
-.form-davice-name__wrapper {
-  width: 270px;
-  height: 20px;
-  display: flex;
+/* Monitor */
+
+.form-monitor__wrapper {
+  background-color: rgba(0, 105, 92, 0.38);
+  padding: 5px;
+  border-radius: 5px;
+  max-width: fit-content;
   margin: auto;
-  margin-bottom: 20px;
-  justify-content: space-between;
-  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.monitor {
+  margin-bottom: 50px;
 }

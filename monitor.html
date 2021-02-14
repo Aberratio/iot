@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>IoT</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="container flex">
+        <a href="settings.html"><h1 class="logo">Czujnik 1</h1></a>
+      </div>
+    </div>
+
+    <!-- Monitor Settings -->
+    <section class="menu">
+      <div class="settings-container">
+        <h2 class="form-name">Ustawienia widoku</h2>
+        <form>
+          <!-- ======================= WIDOCZNE NA EKRANIE ======================= -->
+          <div class="monitor">
+            <h3 class="form-name__wrapper">Widoczne na ekranie</h3>
+
+            <!-- ---------------- widget - begin ----------------------------- -->
+            <div class="form-monitor__wrapper">
+              <div class="form-control form__wrapper">
+                <p>temperatura</p>
+                <div>
+                  <button class="image_btn"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash" class="image_on_button" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"></path></svg></button>
+                  <button class="image_btn">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-up" class="image_on_button" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"></path></svg>
+                  </button>
+                  <button class="image_btn"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-down" class="image_on_button" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M413.1 222.5l22.2 22.2c9.4 9.4 9.4 24.6 0 33.9L241 473c-9.4 9.4-24.6 9.4-33.9 0L12.7 278.6c-9.4-9.4-9.4-24.6 0-33.9l22.2-22.2c9.5-9.5 25-9.3 34.3.4L184 343.4V56c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24v287.4l114.8-120.5c9.3-9.8 24.8-10 34.3-.4z"></path></svg></button>
+                </div>
+              </div>
+            </div>
+            <!-- ---------------- widget - end ----------------------------- -->
+
+            <!-- ---------------- widget - begin ----------------------------- -->
+            <div class="form-monitor__wrapper">
+              <div class="form-control form__wrapper">
+                <p>wilgotność</p>
+                <div>
+                  <button class="image_btn"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="trash" class="image_on_button" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16zM53.2 467a48 48 0 0 0 47.9 45h245.8a48 48 0 0 0 47.9-45L416 128H32z"></path></svg></button>
+                  <button class="image_btn">
+                      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-up" class="image_on_button" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"></path></svg>
+                  </button>
+                  <button class="image_btn"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-down" class="image_on_button" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M413.1 222.5l22.2 22.2c9.4 9.4 9.4 24.6 0 33.9L241 473c-9.4 9.4-24.6 9.4-33.9 0L12.7 278.6c-9.4-9.4-9.4-24.6 0-33.9l22.2-22.2c9.5-9.5 25-9.3 34.3.4L184 343.4V56c0-13.3 10.7-24 24-24h32c13.3 0 24 10.7 24 24v287.4l114.8-120.5c9.3-9.8 24.8-10 34.3-.4z"></path></svg></button>
+                </div>
+              </div>
+            </div>
+            <!-- ---------------- widget - end ----------------------------- -->
+          </div>
+
+          <!-- ======================= NIEWIDOCZNE NA EKRANIE ======================= -->
+          <div class="monitor">
+            <h3 class="form-name__wrapper">Niewidoczne na ekranie</h3>
+
+            <!-- ---------------- widget - begin ----------------------------- -->
+            <div class="form-monitor__wrapper">
+              <div class="form-control form__wrapper">
+                <div>
+                  <button class="image_btn"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="image_on_button" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg></button>
+                </div>
+                <p>CO2</p>
+                <p></p>
+              </div>
+            </div>
+            <!-- ---------------- widget - end ----------------------------- -->
+
+            <!-- ---------------- widget - begin ----------------------------- -->
+            <div class="form-monitor__wrapper">
+                <div class="form-control form__wrapper">
+                  <div>
+                    <button class="image_btn">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="plus" class="image_on_button" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg>
+                    </button>
+                  </div>
+                  <p>Color</p>
+                  <p></p>
+                </div>
+              </div>
+              <!-- ---------------- widget - end ----------------------------- -->
+
+          <input type="submit" value="Aktualizuj" class="btn mt-2" />
+        </form>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div class="container flex"></div>
+    </div>
+  </body>
+</html>
