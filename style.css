@@ -110,6 +110,19 @@ img {
   padding: auto;
 }
 
+.image_on_menu_button {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+.btn-with-img {
+  padding: 20px;
+  padding-top: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .monitor-button__container {
   display: block;
   justify-content: space-between;
