@@ -15,6 +15,16 @@
       </div>
     </div>
 
+    <!-- Modal -->
+
+    <div id="networkSearchModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <p>Poszukiwanie sieci..</p>
+    </div>
+
+    </div>
+
     <!-- Network Settings -->
     <section class="menu">
       <div class="settings-container">
@@ -32,7 +42,7 @@
           <div>
             <div class="input-with-button">
               <p class="form-control_text-input">Wybierz sieć
-                <div class="image_btn">
+                <div class="image_btn" id="networkSearchButton">
                   <svg
                     aria-hidden="true"
                     focusable="false"
@@ -77,4 +87,21 @@
       <div class="container flex"></div>
     </div>
   </body>
+
+  <script>
+    var modal = document.getElementById("networkSearchModal");
+    var btn = document.getElementById("networkSearchButton");
+    var span = document.getElementsByClassName("close-modal")[0];
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    </script>
 </html>
