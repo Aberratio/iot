@@ -240,12 +240,15 @@ input:checked + .slider:before {
 
 /* ------ FOOTER ------ */
 .footer {
-  background-color: var(--primary-color);
   color: #fff;
   height: 70px;
   position: fixed;
   width: 100%;
   bottom: 0;
+}
+
+.footer-button__container {
+  margin-left: 30px;
 }
 
 /* ------ SETTINGS ------ */
