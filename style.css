@@ -43,6 +43,10 @@ img {
   width: 100%;
 }
 
+.inline-element {
+  display: inline;
+}
+
 /* ------  containers ------  */
 
 .container {
@@ -125,6 +129,42 @@ img {
   height: 40px;
   border: 1px solid var(--primary-color);
   border-radius: 5px;
+  padding-left: 3px;
+}
+.form-control input::placeholder {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(85, 78, 78);
+}
+
+.input-with-button {
+  font-size: 16px;
+  color: rgb(85, 78, 78);
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 0;
+  justify-content: space-between;
+  width: 270px;
+}
+
+.input-with-button > .image_btn {
+  margin-top: 18px;
+  border-radius: 0 5px 5px 0;
+}
+
+.input-with-button > .image_btn:hover {
+  transform: scale(1.02);
+}
+
+.form-control_text-input {
+  z-index: -100;
+  display: inline-block;
+  width: 230px;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px 0 0 5px;
+  height: 40px;
+  padding-top: 5px;
+  padding-left: 3px;
 }
 
 .form-name {

@@ -24,27 +24,40 @@
             <input
               type="text"
               name="name"
-              placeholder=" Nazwa sieci"
+              placeholder="Nazwa sieci"
               required
               autocomplete="off"
             />
           </div>
-          <div class="form-control">
-            <select name="network" id="network-select">
-              <option value="">-- Wybierz sieć --</option>
-              <option value="siec_1">Sieć 1</option>
-              <option value="siec_2">Sieć 2</option>
-              <option value="siec_3">Sieć 3</option>
-              <option value="siec_4">Sieć 4</option>
-              <option value="siec_5">Sieć 5</option>
-              <option value="siec_6">Sieć 6</option>
-            </select>
+          <div>
+            <div class="input-with-button">
+              <p class="form-control_text-input">Wybierz sieć
+                <div class="image_btn">
+                  <svg
+                    aria-hidden="true"
+                    focusable="false"
+                    data-prefix="fas"
+                    data-icon="project-diagram"
+                    class="image_on_button"
+                    role="img"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 640 512"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M384 320H256c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32V352c0-17.67-14.33-32-32-32zM192 32c0-17.67-14.33-32-32-32H32C14.33 0 0 14.33 0 32v128c0 17.67 14.33 32 32 32h95.72l73.16 128.04C211.98 300.98 232.4 288 256 288h.28L192 175.51V128h224V64H192V32zM608 0H480c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32V32c0-17.67-14.33-32-32-32z"
+                    ></path>
+                  </svg>
+                </div>
+              </p>
+              
+            </div>
           </div>
           <div class="form-control">
             <input
               type="password"
               name="password"
-              placeholder=" Hasło"
+              placeholder="Hasło"
               required
             />
           </div>
