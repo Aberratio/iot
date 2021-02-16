@@ -1,6 +1,7 @@
 /* ------ GENERAL ------ */
 :root {
   --primary-color: #00695c;
+  --secondary-color: rgba(0, 105, 92, 0.38);
 }
 
 .mt-2 {
@@ -63,6 +64,37 @@ img {
   height: 100%;
 }
 
+/* ------ table ------ */
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 450px;
+  margin: auto;
+}
+
+@media (max-width: 450px) {
+  table {
+    width: 300px;
+  }
+}
+
+@media (max-width: 310px) {
+  table {
+    width: 250px;
+  }
+}
+td,
+th {
+  border: none;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: var(--secondary-color);
+}
+
 /* ------ buttons ------ */
 
 .btn {
@@ -83,6 +115,20 @@ img {
 .btn:hover,
 .image_btn:hover {
   transform: scale(0.96);
+}
+
+.btn_medium {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 16px;
+  display: block;
+  margin: auto;
+  justify-content: center;
+  width: 120px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .image_btn {
@@ -383,7 +429,7 @@ input:checked + .slider:before {
 /* Device */
 
 .form-device__wrapper {
-  background-color: rgba(0, 105, 92, 0.38);
+  background-color: var(--secondary-color);
   padding: 20px;
   border-radius: 5px;
   max-width: fit-content;
@@ -394,7 +440,7 @@ input:checked + .slider:before {
 /* Monitor */
 
 .form-monitor__wrapper {
-  background-color: rgba(0, 105, 92, 0.38);
+  background-color: var(--secondary-color);
   padding: 5px;
   border-radius: 5px;
   max-width: fit-content;
