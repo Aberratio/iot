@@ -161,6 +161,7 @@ img {
 }
 
 .input-with-button > .image_btn {
+  display: flex;
   margin-top: 18px;
   border-radius: 0 5px 5px 0;
 }
@@ -170,8 +171,10 @@ img {
 }
 
 .form-control_text-input {
+  display: flex;
+  float: left;
+  margin-top: 18px;
   z-index: -100;
-  display: inline-block;
   width: 230px;
   border: 1px solid var(--primary-color);
   border-radius: 5px 0 0 5px;
@@ -369,6 +372,12 @@ input:checked + .slider:before {
   margin: auto;
   margin-bottom: 40px;
   margin-top: 40px;
+}
+
+.network-search_btn {
+  display: flex;
+  float: left;
+  margin-bottom: 38px;
 }
 
 /* Device */
