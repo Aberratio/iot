@@ -84,6 +84,7 @@ table {
     width: 250px;
   }
 }
+
 td,
 th {
   border: none;
@@ -93,6 +94,17 @@ th {
 
 tr:nth-child(even) {
   background-color: var(--secondary-color);
+}
+
+/* img */
+
+.image_fontawesome {
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: auto;
+  margin-top: 10px;
+  padding: auto;
 }
 
 /* ------ buttons ------ */
