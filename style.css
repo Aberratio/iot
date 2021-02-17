@@ -189,10 +189,7 @@ tr:nth-child(even) {
   border: 1px solid var(--primary-color);
   border-radius: 5px;
   padding-left: 3px;
-}
-.form-control input::placeholder {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: rgb(85, 78, 78);
+  color: rgb(0, 0, 0) !important;
 }
 
 .input-with-button {
@@ -227,8 +224,18 @@ tr:nth-child(even) {
   height: 40px;
   padding-top: 5px;
   padding-left: 3px;
+  font-size: 16px;
+  color: rgb(0, 0, 0) !important;
 }
 
+.input-with-button input::placeholder,
+.input-with-button input,
+.form-control input::placeholder,
+.form-control input,
+.form-control_text-input {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(85, 78, 78);
+}
 .form-name {
   color: var(--primary-color);
   display: block;
