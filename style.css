@@ -390,6 +390,25 @@ input:checked + .slider:before {
   margin-left: 30px;
 }
 
+/* ------ yes no ------ */
+
+.yes_no_container {
+  color: #fff;
+  height: 70px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 2000;
+}
+
+.yes_btn {
+  background-color: #003a33;
+}
+
+.no_btn {
+  background-color: #7b1e07;
+}
+
 /* ------ SETTINGS ------ */
 
 .settings-container {
