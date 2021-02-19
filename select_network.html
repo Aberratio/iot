@@ -15,6 +15,18 @@
       </div>
     </div>
 
+    <!-- Modal -->
+    <div id="networkSearchModal" class="modal">
+      <div class="modal-content">
+        <div class="container flex">
+          <button type="submit" class="btn btn_medium yes_btn">TAK</button>
+          <button type="submit" class="btn btn_medium no_btn" id="no_btn">
+            NIE
+          </button>
+        </div>
+      </div>
+    </div>
+
     <!-- Network Settings -->
     <section class="menu">
       <div class="settings-container">
@@ -56,7 +68,15 @@
                   ></path>
                 </svg>
               </td>
-              <td><button class="btn_medium">Wybierz</button></td>
+              <td>
+                <button
+                  onClick="preventDefault"
+                  class="btn btn_medium"
+                  name="networkSearchButton"
+                >
+                  Wybierz
+                </button>
+              </td>
             </tr>
             <tr>
               <td>Centro comercial Moctezuma</td>
@@ -78,7 +98,15 @@
                   ></path>
                 </svg>
               </td>
-              <td><button class="btn_medium">Wybierz</button></td>
+              <td>
+                <button
+                  onClick="preventDefault"
+                  class="btn btn_medium"
+                  name="networkSearchButton"
+                >
+                  Wybierz
+                </button>
+              </td>
             </tr>
             <tr>
               <td>Ernst Handel</td>
@@ -100,7 +128,15 @@
                   ></path>
                 </svg>
               </td>
-              <td><button class="btn_medium">Wybierz</button></td>
+              <td>
+                <button
+                  onClick="preventDefault"
+                  class="btn btn_medium"
+                  name="networkSearchButton"
+                >
+                  Wybierz
+                </button>
+              </td>
             </tr>
             <tr>
               <td>Island Trading</td>
@@ -122,7 +158,15 @@
                   ></path>
                 </svg>
               </td>
-              <td><button class="btn_medium">Wybierz</button></td>
+              <td>
+                <button
+                  onClick="preventDefault"
+                  class="btn btn_medium"
+                  name="networkSearchButton"
+                >
+                  Wybierz
+                </button>
+              </td>
             </tr>
             <tr>
               <td>Laughing Bacchus Winecellars</td>
@@ -144,7 +188,15 @@
                   ></path>
                 </svg>
               </td>
-              <td><button class="btn_medium">Wybierz</button></td>
+              <td>
+                <button
+                  onClick="preventDefault"
+                  class="btn btn_medium"
+                  name="networkSearchButton"
+                >
+                  Wybierz
+                </button>
+              </td>
             </tr>
             <tr>
               <td>Magazzini Alimentari Riuniti</td>
@@ -166,19 +218,46 @@
                   ></path>
                 </svg>
               </td>
-              <td><button class="btn_medium">Wybierz</button></td>
+              <td>
+                <button
+                  onClick="preventDefault"
+                  class="btn btn_medium"
+                  name="networkSearchButton"
+                >
+                  Wybierz
+                </button>
+              </td>
             </tr>
           </table>
           <button type="submit" class="btn mt-2">Aktualizuj</button>
         </form>
       </div>
     </section>
-
-    <div class="yes_no_container" hidden>
-      <div class="container flex">
-        <button type="submit" class="btn_medium yes_btn">TAK</button>
-        <button type="submit" class="btn_medium no_btn">NIE</button>
-      </div>
-    </div>
   </body>
+
+  <!-- Scripts -->
+
+  <script>
+    var modal = document.getElementById("networkSearchModal");
+    var btns = document.getElementsByName("networkSearchButton");
+    var closeModalButton = document.getElementById("no_btn");
+
+    btns.forEach((x) => {
+      x.addEventListener("click", function (event) {
+        event.preventDefault();
+      });
+      x.onclick = function () {
+        modal.style.display = "block";
+      };
+    });
+
+    closeModalButton.onclick = function () {
+      modal.style.display = "none";
+    };
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
+  </script>
 </html>

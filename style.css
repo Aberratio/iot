@@ -364,7 +364,13 @@ input:checked + .slider:before {
   padding: 20px;
   border: 1px solid #888;
   border-radius: 5px;
-  width: 80%;
+  width: 400px;
+}
+
+@media (max-width: 420px) {
+  .modal-content {
+    width: 340px;
+  }
 }
 
 .close-modal {
@@ -422,6 +428,7 @@ input:checked + .slider:before {
 
 .yes_btn {
   background-color: #003a33;
+  margin-right: 30px;
 }
 
 .no_btn {
