@@ -371,6 +371,12 @@ input:checked + .slider:before {
   width: 400px;
 }
 
+.modal-title {
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 @media (max-width: 420px) {
   .modal-content {
     width: 340px;
