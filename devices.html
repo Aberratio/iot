@@ -11,7 +11,7 @@
     <!-- Navbar -->
     <div class="navbar">
       <div class="container flex">
-        <a href="settings.html"><h1 class="logo">Czujnik 1</h1></a>
+        <h1 class="logo"><a href="/">%NAME%<a> / <a href="/config">Ustawienia<a> / Czujniki</h1>
       </div>
     </div>
 
@@ -36,7 +36,6 @@
                   type="text"
                   name="temp_min"
                   placeholder=" alert poniżej"
-                  required
                   autocomplete="off"
                 />
               </div>
@@ -45,7 +44,6 @@
                   type="text"
                   name="temp_max"
                   placeholder=" alert powyżej"
-                  required
                   autocomplete="off"
                 />
               </div>
@@ -83,7 +81,6 @@
                   type="text"
                   name="temp_min"
                   placeholder=" alert poniżej"
-                  required
                   autocomplete="off"
                 />
               </div>
@@ -92,7 +89,6 @@
                   type="text"
                   name="temp_max"
                   placeholder=" alert powyżej"
-                  required
                   autocomplete="off"
                 />
               </div>
@@ -112,7 +108,7 @@
               </div>
             </div>
           </div>
-          <input type="submit" value="Aktualizuj" class="btn mt-2" />
+          <button type="submit" name="action" value="APPLY" class="btn" /> OK </button>
         </form>
       </div>
     </section>
