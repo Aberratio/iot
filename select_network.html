@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>IoT</title>
+    <title>%NAME%</title>
   </head>
   <body>
     <!-- Navbar -->
     <div class="navbar">
       <div class="container flex">
-        <a href="settings.html"><h1 class="logo">Czujnik 1</h1></a>
+        <h1 class="logo"><a href="/">%NAME%<a> / <a href="/config">Ustawienia<a> / <a href="/network">Połączenie<a> / WiFi</h1>
       </div>
     </div>
 
@@ -19,10 +19,9 @@
     <div id="networkSearchModal" class="modal">
       <div class="modal-content">
         <div class="container flex">
+          <p>Oto jest pytanie?</p>
           <button type="submit" class="btn btn_medium yes_btn">TAK</button>
-          <button type="submit" class="btn btn_medium no_btn" id="no_btn">
-            NIE
-          </button>
+          <button type="submit" class="btn btn_medium no_btn" id="no_btn">NIE</button>
         </div>
       </div>
     </div>
@@ -30,17 +29,10 @@
     <!-- Network Settings -->
     <section class="menu">
       <div class="settings-container">
-        <h2 class="form-name">Wyszukaj sieć</h2>
-        <form>
+        <h2 class="form-name">Lista dostępnych sieci:</h2>
+        <form action="/network" method="POST">
           <div class="form-control">
-            <input
-              type="text"
-              name="name"
-              placeholder="Nazwa sieci"
-              autocomplete="off"
-            />
           </div>
-
           <table>
             <tr>
               <th>Nazwa sieci</th>
@@ -229,7 +221,7 @@
               </td>
             </tr>
           </table>
-          <button type="submit" class="btn mt-2">Aktualizuj</button>
+          <button type="submit" name="action" value="APPLY_WIFI" class="btn" /> OK </button>
         </form>
       </div>
     </section>
