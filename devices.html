@@ -11,26 +11,19 @@
     <!-- Navbar -->
     <div class="navbar">
       <div class="container flex">
-        <h1 class="logo"><a href="/">%NAME%<a> / <a href="/config">Ustawienia<a> / Czujniki</h1>
+        <h1 class="logo"><a href="/">%NAME%<a> / <a href="/config">Ustawienia<a> / Powiadomienia</h1>
       </div>
     </div>
 
     <!-- Devices Settings -->
     <section class="menu">
       <div class="settings-container">
-        <h2 class="form-name">Ustawienia czujników</h2>
+        <h2 class="form-name">Ustawienia powiadomień</h2>
         <form action="/network" method="POST">
           <!-- ---------------- device - begin ----------------------------- -->
           <div class="device">
             <h3 class="form-name__wrapper">temperatura</h3>
             <div class="form-device__wrapper">
-              <div class="form-control form__wrapper">
-                <p>Wyświetl na ekranie</p>
-                <label class="switch">
-                  <input type="checkbox" />
-                  <span class="slider round"></span>
-                </label>
-              </div>
               <div class="form-control">
                 <input
                   type="text"
@@ -48,7 +41,14 @@
                 />
               </div>
               <div class="form-control form__wrapper">
-                <p>Alert na ekranie</p>
+                <p>Alert na dashboardzie</p>
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div class="form-control form__wrapper">
+                <p>Alert na push</p>
                 <label class="switch">
                   <input type="checkbox" />
                   <span class="slider round"></span>
@@ -69,13 +69,6 @@
           <div class="device">
             <h3 class="form-name__wrapper">wilgotność</h3>
             <div class="form-device__wrapper">
-              <div class="form-control form__wrapper">
-                <p>Wyświetl na ekranie</p>
-                <label class="switch">
-                  <input type="checkbox" />
-                  <span class="slider round"></span>
-                </label>
-              </div>
               <div class="form-control">
                 <input
                   type="text"
@@ -93,7 +86,14 @@
                 />
               </div>
               <div class="form-control form__wrapper">
-                <p>Alert na ekranie</p>
+                <p>Alert na dashboardzie</p>
+                <label class="switch">
+                  <input type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div class="form-control form__wrapper">
+                <p>Alert na push</p>
                 <label class="switch">
                   <input type="checkbox" />
                   <span class="slider round"></span>
