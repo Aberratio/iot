@@ -50,6 +50,10 @@ img {
 
 /* ------  containers ------  */
 
+.dashboard{
+     text-align: center;
+}
+ 
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -57,6 +61,11 @@ img {
   padding: 0 40px;
 }
 
+.circle-container {
+     display: inline-block;
+     margin: 10px;
+}
+ 
 .flex {
   display: flex;
   justify-content: space-between;
