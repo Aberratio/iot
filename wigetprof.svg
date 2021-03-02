@@ -32,12 +32,9 @@
   </text>
 
   <text
-     fill="#808080"
+     class="widget_value_text"
      x="80" y="130"
      id="temp"
-     font-size="34"
-     font-family="Arial, Helvetica, sans-serif"
-     text-anchor="middle"
      xml:space="preserve"
    >%VALUE%%UNIT%</text>
 
