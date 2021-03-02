@@ -4,6 +4,10 @@
   --secondary-color: rgba(0, 105, 92, 0.38);
 }
 
+.mt-1 {
+  margin-top: 20px !important;
+}
+
 .mt-2 {
   margin-top: 50px !important;
 }
@@ -415,10 +419,16 @@ input:checked + .slider:before {
   width: 100%;
   font-size: 14px;
   z-index: 200;
+  overflow: hidden;
 }
 
 .navbar .flex {
   justify-content: space-between;
+  overflow: hidden;
+}
+
+.navbar-btn {
+  padding-bottom: 8px;
 }
 
 /* ------ FOOTER ------ */
@@ -454,7 +464,7 @@ input:checked + .slider:before {
   background-color: #7b1e07;
 }
 
-/* ------ SETTINGS ------ */
+/* ------ widgets ------ */
 
 .widget_value_text {
   fill: #808080;
