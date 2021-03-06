@@ -207,6 +207,7 @@ tr:nth-child(even) {
 }
 
 .form-control input,
+.field input,
 .form-control select {
   font-size: 16px;
   display: block;
@@ -299,6 +300,91 @@ tr:nth-child(even) {
   margin-bottom: 20px;
   justify-content: space-between;
   color: var(--primary-color);
+}
+
+/* inputs */
+.field {
+  display: flex;
+  flex-flow: column-reverse;
+  margin-bottom: 1em;
+}
+
+label,
+input {
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+
+.floating_label {
+  width: 270px;
+  margin: auto;
+  display: inline;
+}
+
+input {
+  font-size: 1.2em;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  font-family: inherit;
+  -webkit-appearance: none;
+  border-radius: 0;
+  padding: 0;
+  cursor: text;
+}
+
+input:focus {
+  outline: 0;
+  border-bottom: 1px solid #666;
+}
+
+label {
+  letter-spacing: 0.05em;
+  font-size: 1em;
+  padding-left: 5px;
+}
+
+input:placeholder-shown + label {
+  cursor: text;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform-origin: left bottom;
+  transform: translate(0, 2rem) scale(1.1);
+  color: var(--primary-color);
+}
+
+::-webkit-input-placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+
+input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+input:not(:placeholder-shown) + label,
+input:focus + label {
+  transform: translate(0, 0) scale(1);
+  cursor: pointer;
+  color: var(--primary-color);
+  padding-left: 0px;
+}
+
+/* input with button */
+form.example .ssid {
+  float: left;
+  width: 80%;
+}
+
+form.example .image_btn {
+  float: left;
+  width: 20%;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 /* switch */
