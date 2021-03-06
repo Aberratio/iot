@@ -1,34 +1,34 @@
 <svg width="162" height="162" xmlns="http://www.w3.org/2000/svg">
 
- <g>
+ <g class="widget_svg">
   <title>%NAME%</title>
   <rect x="1" y="1" width="160" height="160" id="canvas_background" fill="#D0D0D0" stroke="#D0D0D0"/>
 
-  <path d="M25,140 A58,58 0 0 1 22,121" stroke-width="20" stroke="#00695c" fill="none" id="wartosc_bzw"/>
-  <path d="M22,121 A58,58 0 0 1 %POS_VAL%" stroke-width="20" stroke="#00695c" fill="none" id="wartosc"/>
-  <path d="M%POS_VAL% A58,58 0 0 1 138,121" stroke-width="20" stroke="#9ED2C1" fill="none" id="baza"/>
-  <path d="M138,121 A58,58 0 0 1 135,140" stroke-width="20" stroke="#9ED2C1" fill="none" id="baza_bzw"/>
+  <path d="M25,140 A58,58 0 0 1 22,121" class="widget_value" id="wartosc_bzw"/>
+  <path d="M22,121 A58,58 0 0 1 %POS_VAL%" class="widget_value" id="wartosc"/>
+  <path d="M%POS_VAL% A58,58 0 0 1 138,121" class="widget_value" stroke="#9ED2C1" id="baza"/>
+  <path d="M138,121 A58,58 0 0 1 135,140" class="widget_value" stroke="#9ED2C1" id="baza_bzw"/>
 
-  <path d="M14, 144 A70,70 0 0 1 %POS_ALERT_LO%"  stroke-width="2" stroke="#0050B4" fill="none" id="zimno"/>
-  <path d="M%POS_ALERT_LO% A70,70 0 0 1 %POS_ALERT_HI%" stroke-width="2" stroke="#006428" fill="none" id="baza2"/>
-  <path d="M%POS_ALERT_HI% A70,70 0 0 1 146,144" stroke-width="2" stroke="#B40014" fill="none" id="cieplo"/>
+  <path d="M14, 144 A70,70 0 0 1 %POS_ALERT_LO%" class="widget_skale" id="zimno"/>
+  <path d="M%POS_ALERT_LO% A70,70 0 0 1 %POS_ALERT_HI%" class="widget_skale" stroke="#006428" id="baza2"/>
+  <path d="M%POS_ALERT_HI% A70,70 0 0 1 146,144" class="widget_skale" stroke="#B40014" id="cieplo"/>
 
-  <path d="M10,144 A72,72 0 0 1 8,121"   fill="transparent" id="min_%ID%"/>
+  <path d="M10,144 A72,72 0 0 1 8,121" fill="transparent" id="min_%ID%"/>
   <path d="M%POS_VAL_ALERT_LO% A72,72 0 0 1 152,121" fill="transparent" id="min_alert_%ID%"/>
   <path d="M%POS_VAL_ALERT_HI% A72,72 0 0 1 152,121" fill="transparent" id="max_alert_%ID%"/>
-  <path d="M152,128 A72,72 0 0 1 10,138"  fill="transparent" id="max_%ID%"/>
+  <path d="M152,128 A72,72 0 0 1 10,138" fill="transparent" id="max_%ID%"/>
 
-  <text font-size="12" text-anchor="start">
-  <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#min_%ID%">%VAL_MIN%</textPath>
+  <text>
+  <textPath xlink:href="#min_%ID%">%VAL_MIN%</textPath>
   </text>
-  <text font-size="12"  text-anchor="start">
-  <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#min_alert_%ID%">%VAL_ALERT_LO%</textPath>
+  <text>
+  <textPath xlink:href="#min_alert_%ID%">%VAL_ALERT_LO%</textPath>
   </text>
-  <text font-size="12"  text-anchor="start">
-  <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#max_alert_%ID%">%VAL_ALERT_HI%</textPath>
+  <text>
+  <textPath xlink:href="#max_alert_%ID%">%VAL_ALERT_HI%</textPath>
   </text>
-  <text font-size="12"  text-anchor="start">
-  <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#max_%ID%">%VAL_MAX%</textPath>
+  <text>
+  <textPath xlink:href="#max_%ID%">%VAL_MAX%</textPath>
   </text>
 
   <text
@@ -39,12 +39,9 @@
    >%VALUE%%UNIT%</text>
 
   <text
-     fill="#808080"
+     class="widget_value_text"
      x="80" y="30"
      id="label"
-     font-size="12"
-     font-family="Arial, Helvetica, sans-serif"
-     text-anchor="middle"
      xml:space="preserve"
    >%NAME%</text>
 

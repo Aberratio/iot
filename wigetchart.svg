@@ -1,6 +1,6 @@
 <svg width="162" height="162" xmlns="http://www.w3.org/2000/svg">
 
- <g>
+ <g class="widget_svg">
   <title>%NAME%</title>
   <rect x="0" y="0" width="162" height="162" fill="#9ED2C1" stroke="#D0D0D0" id="canvas_background" />
   <rect x="0" y="%BLUE_POS%" width="162" height="162" fill="#50BEFF" stroke="#50BEFF" id="blue_background" />
@@ -8,28 +8,22 @@
 
   <path d="%CHART%" fill="none" stroke="#00695c" stroke-width="3" />
 
-  <text font-size="12"  text-anchor="start" x="2" y="14"> %VAL_MAX% </text>
-  <text font-size="12"  text-anchor="start" x="2" y="156"> %VAL_MIN% </text>
-  <text font-size="12"  text-anchor="start" x="2" y="%POS_VAL_ALERT_HI%"> %VAL_ALERT_HI% </text>
-  <text font-size="12"  text-anchor="start" x="2" y="%POS_VAL_ALERT_LO%"> %VAL_ALERT_LO% </text>
-  <text font-size="12"  text-anchor="end" x="156" y="156">%Y_LABEL%</text>
+  <text x="2" y="14"> %VAL_MAX% </text>
+  <text x="2" y="156"> %VAL_MIN% </text>
+  <text x="2" y="%POS_VAL_ALERT_HI%"> %VAL_ALERT_HI% </text>
+  <text x="2" y="%POS_VAL_ALERT_LO%"> %VAL_ALERT_LO% </text>
+  <text text-anchor="end" x="156" y="156">%Y_LABEL%</text>
   <text
-     fill="#808080"
+     class="widget_middlefont widget_value_text"
      x="81" y="80"
      id="temp"
-     font-size="34"
-     font-family="Arial, Helvetica, sans-serif"
-     text-anchor="middle"
      xml:space="preserve"
    >%VALUE%%UNIT%</text>
 
   <text
-     fill="#808080"
+     class="widget_value_text "
      x="81" y="100"
      id="label"
-     font-size="12"
-     font-family="Arial, Helvetica, sans-serif"
-     text-anchor="middle"
      xml:space="preserve"
    >%NAME%</text>
 

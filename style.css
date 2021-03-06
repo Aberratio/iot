@@ -552,11 +552,39 @@ input:checked + .slider:before {
 
 /* ------ widgets ------ */
 
+.widget_minifont {
+  font-size: 12px;
+}
+
+.widget_middlefont {
+  font-size: 34px;
+}
+
+.widget_maxidlefont {
+  font-size: 48px;
+}
+
 .widget_value_text {
   fill: #808080;
-  font-size: 34px;
   font-family: Arial, Helvetica, sans-serif;
   text-anchor: middle;
+}
+
+.widget_svg > text {
+  font-size: 12px;
+  text-anchor: start;
+}
+
+.widget_value {
+  stroke-width: 20;
+  stroke: #00695c;
+  fill: none;
+}
+
+.widget_skale {
+  stroke-width: 2;
+  stroke: #0050b4;
+  fill: none;
 }
 
 /* ------ SETTINGS ------ */
