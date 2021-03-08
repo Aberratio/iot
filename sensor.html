@@ -1,0 +1,32 @@
+<div class="device">
+  <h3 class="form-name__wrapper">%NAME%</h3>
+  <div class="form-device__wrapper">
+    <div class="form-control">
+      <input type="number" name="%NAME_ALERT_LO%" value= "%ALERT_LO%" min="%LO_MIN%" max="%LO_MAX%" step="%STEP%" placeholder=" alert poniżej" autocomplete="off"/>
+    </div>
+    <div class="form-control">
+      <input type="number" name="%NAME_ALERT_HI%" value= "%ALERT_HI%" min="%HI_MIN%" max="%HI_MAX%" step="%STEP%" placeholder=" alert powyżej" autocomplete="off"/>
+    </div>
+    <div class="form-control form__wrapper">
+      <p>Alert na dashboardzie</p>
+      <label class="switch">
+        <input type="checkbox" name="%NAME_NOTIF_DASH%" %NOTIF_DASH% value="true" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <div class="form-control form__wrapper">
+      <p>Alert na push</p>
+      <label class="switch">
+        <input type="checkbox" name="%NAME_NOTIF_PUSH%" %NOTIF_PUSH% value="true" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+    <div class="form-control form__wrapper">
+      <p>Alert na mail</p>
+      <label class="switch">
+        <input type="checkbox" name="%NAME_NOTIF_MAIL%" %NOTIF_MAIL% value="true" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+</div>

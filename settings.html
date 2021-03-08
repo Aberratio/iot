@@ -37,26 +37,11 @@
       <div class="modal-content">
         <div class="modal-title">Czy jesteś pewien?</div>
         <form action="/network" method="POST">
-          <div class="container flex">
-            <input id="question" name="question" type="hidden" value="yesNo" />
-            <button
-              type="submit"
-              name="action"
-              value="YES"
-              class="btn btn_medium yes_btn"
-            >
-              TAK
-            </button>
-            <button
-              type="submit"
-              name="action"
-              value="NO"
-              class="btn btn_medium no_btn"
-              id="no_btn"
-            >
-              NIE
-            </button>
-          </div>
+        <div class="container flex">
+          <input id = "question" name="question" type="hidden" value="yesNo"/>
+          <button type="submit" name="action" value="YES" class="btn btn_medium yes_btn">TAK</button>
+          <button type="submit" name="action" value="NO" class="btn btn_medium no_btn" id="no_btn">NIE</button>
+        </div>
         </form>
       </div>
     </div>
@@ -64,17 +49,12 @@
     <!-- Settings -->
     <section class="menu">
       <div class="settings-container">
-        <a href="/network"><button class="btn">Połączenie</button></a>
         <a href="/display"><button class="btn">Ekran</button></a>
+        <a href="/leds"><button class="btn">Diody</button></a>
         <a href="/sensors"><button class="btn">Powiadomienia</button></a>
-        <form id="formWithButton" action="/network" method="POST">
-          <button
-            class="btn btn-with-img"
-            onClick="preventDefault"
-            type="submit"
-            name="questionButton"
-            value="SAVE"
-          >
+        <a href="/network"><button class="btn">Połączenie</button></a>
+        <form id = "formWithButton" action="/network" method="POST">
+          <button class="btn btn-with-img" onClick="preventDefault" type="submit" name="questionButton" value="SAVE">
             <svg
               aria-hidden="true"
               focusable="false"
@@ -93,13 +73,7 @@
             <div>Zapisz</div>
             <svg class="image_on_menu_button" role="img"></svg>
           </button>
-          <button
-            class="btn btn-with-img"
-            onClick="preventDefault"
-            type="submit"
-            name="questionButton"
-            value="LOAD"
-          >
+          <button class="btn btn-with-img" onClick="preventDefault" type="submit" name="questionButton" value="LOAD">
             <svg
               aria-hidden="true"
               focusable="false"
@@ -118,15 +92,7 @@
             <div>Wczytaj</div>
             <svg class="image_on_menu_button" role="img"></svg>
           </button>
-          <button
-            class="btn"
-            onClick="preventDefault"
-            name="questionButton"
-            type="submit"
-            value="RESET"
-          >
-            Uruchom ponownie
-          </button>
+          <button class="btn" onClick="preventDefault" name="questionButton" type="submit" value="RESET">Uruchom ponownie</button>
         </form>
         <p class="version-container">%VERSION%</p>
       </div>
@@ -162,4 +128,5 @@
       }
     };
   </script>
+
 </html>

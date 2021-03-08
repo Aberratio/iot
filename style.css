@@ -276,14 +276,14 @@ tr:nth-child(even) {
 
 .form__wrapper p {
   display: inline;
-  font-size: 16px;
+  font-size: 12px;
   padding-top: 0px;
   margin-top: 5px;
   vertical-align: middle;
 }
 
 .form__wrapper {
-  width: 270px;
+  width: 370px;
   height: 20px;
   display: flex;
   font-size: 8px;

@@ -1,0 +1,40 @@
+<svg width="162" height="162" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect x="1" y="1" width="160" height="160" fill="#D0D0D0" stroke="#D0D0D0" id="canvas_background" />
+  <rect x="1" y="130" width="160" height="30" fill="#006EFF" stroke="#006EFF" id="blue_background" />
+  <rect x="1" y="1" width="160" height="30" fill="#FF606E" stroke="#FF606E" id="red_background" />
+
+  <path d="M0,81 L80,81" stroke="#00695c" stroke-width="3" />
+
+  <text font-size="12"  text-anchor="start" x="2" y="14">99</text>
+  <text font-size="12"  text-anchor="start" x="2" y="156">1</text>
+  <text font-size="12"  text-anchor="start" x="2" y="30">88</text>
+  <text font-size="12"  text-anchor="start" x="2" y="128">10</text>
+  <text font-size="12"  text-anchor="end" x="160" y="156">2godz.</text>
+
+
+  <text 
+     fill="#808080" 
+     x="81" y="80" 
+     id="temp" 
+     font-size="34" 
+     font-family="Arial, Helvetica, sans-serif"
+     text-anchor="middle" 
+     xml:space="preserve" 
+   >22'C</text>
+
+  <text 
+     fill="#808080" 
+     x="81" y="100" 
+     id="label" 
+     font-size="12" 
+     font-family="Arial, Helvetica, sans-serif"
+     text-anchor="middle" 
+     xml:space="preserve" 
+   >temperatura</text>
+
+ </g>
+</svg>
+

@@ -1,0 +1,22 @@
+<svg width="162" height="162" xmlns="http://www.w3.org/2000/svg">
+
+ <g font-size="12"  text-anchor="start" >
+  <title>%NAME%</title>
+  <rect x="0" y="0" width="162" height="162" fill="#9ED2C1" stroke="#D0D0D0"/>
+  <rect x="0" y="%BLUE_POS%" width="162" height="162" fill="#50BEFF" stroke="#50BEFF"/>
+  <rect x="0" y="0" width="162" height="%RED_HEIGHT%" fill="#FFA0A0" stroke="#FFA0A0"/>
+
+  <path d="%CHART%" fill="none" stroke="#00695c" stroke-width="3"/>
+
+  <text x="2" y="14">%VAL_MAX%</text>
+  <text x="2" y="156">%VAL_MIN%</text>
+  <text x="2" y="%POS_VAL_ALERT_HI%">%VAL_ALERT_HI%</text>
+  <text x="2" y="%POS_VAL_ALERT_LO%">%VAL_ALERT_LO%</text>
+  <text text-anchor="end" x="160" y="156">%Y_LABEL%</text>
+ </g>
+ <g fill="#808080" font-family="Arial, Helvetica, sans-serif" text-anchor="middle" xml:space="preserve">
+  <text x="81" y="80" font-size="34">%VALUE%%UNIT%</text>
+  <text x="81" y="100" font-size="12">%NAME%</text>
+ </g>
+</svg>
+

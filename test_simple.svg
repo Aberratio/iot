@@ -1,0 +1,33 @@
+<svg width="162" height="162" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
+ <g>
+  <title>NAME</title>
+  <rect x="1" y="1" width="160" height="160" id="canvas_background" fill="#D0D0D0" stroke="#D0D0D0"/>
+
+  <circle cx="81" cy="81" r="70" fill="none" stroke="#00695c" stroke-width="5" />
+
+  <!-- wartosc -->
+  <text 
+     fill="#808080" 
+     x="81" y="100" 
+     id="temp" 
+     font-size="38" 
+     font-family="Arial, Helvetica, sans-serif"
+     text-anchor="middle" 
+     xml:space="preserve" 
+   >22'C</text>
+
+  <text 
+     fill="#808080" 
+     x="81" y="55" 
+     id="label" 
+     font-size="12" 
+     font-family="Arial, Helvetica, sans-serif"
+     text-anchor="middle" 
+     xml:space="preserve" 
+   >temperatura</text>
+
+ </g>
+</svg>
+
