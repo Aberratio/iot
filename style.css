@@ -40,6 +40,16 @@ h2 {
   margin: 10px 0;
 }
 
+@media (max-width: 420px) {
+  h1,
+  h2 {
+    font-weight: 200;
+    line-height: 1;
+    font-size: 16px;
+    margin: 5px 0;
+  }
+}
+
 p {
   margin: 10px 0;
 }
@@ -276,13 +286,31 @@ tr:nth-child(even) {
 
 .form__wrapper p {
   display: inline;
-  font-size: 12px;
+  font-size: 16px;
   padding-top: 0px;
   margin-top: 5px;
   vertical-align: middle;
 }
 
 .form__wrapper {
+  width: 270px;
+  height: 20px;
+  display: flex;
+  font-size: 8px;
+  margin: auto;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.widget__wrapper p {
+  display: inline;
+  font-size: 12px;
+  padding-top: 0px;
+  margin-top: 5px;
+  vertical-align: middle;
+}
+
+.widget__wrapper {
   width: 370px;
   height: 20px;
   display: flex;
