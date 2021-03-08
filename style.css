@@ -514,7 +514,18 @@ input:checked + .slider:before {
 }
 
 .navbar-btn {
-  padding-bottom: 8px;
+  height: 20px;
+  width: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.navbar-btn_config {
+  background: url(config.svg) no-repeat center center;
+}
+
+.navbar-btn_question {
+  background: url(help.svg) no-repeat center center;
 }
 
 /* ------ FOOTER ------ */
