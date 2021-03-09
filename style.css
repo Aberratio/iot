@@ -696,15 +696,15 @@ input:checked + .slider:before {
   margin-bottom: 50px;
 }
 
-.monitor-flex {
-  display: flex;
-  justify-content: space-between;
-  height: 100%;
-}
-
 @media (min-width: 950px) {
   .monitor {
     float: left;
+  }
+
+  .monitor-flex {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
   }
 }
 
