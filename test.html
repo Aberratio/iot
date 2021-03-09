@@ -21,29 +21,17 @@
     </div>
 
     <!-- Modal -->
-    <div id="questionModal" class="modal">
+    <div id="questionModal" class="modal" style="display: %NOTIF_VISIBLE%">
       <div class="modal-content">
         <div class="modal-title">Czy jesteś pewien?</div>
         <form action="/config" method="POST">
           <div class="container flex">
-            <input id="question" name="question" type="hidden" value="yesNo" />
             <button
               type="submit"
               name="action"
-              value="YES"
-              class="btn btn_medium yes_btn"
-            >
-              TAK
-            </button>
-            <button
-              type="submit"
-              name="action"
-              value="NO"
-              class="btn btn_medium no_btn"
-              id="no_btn"
-            >
-              NIE
-            </button>
+              value="clear_info"
+              class="btn btn_medium ok_btn"
+            >OK</button>
           </div>
         </form>
       </div>
