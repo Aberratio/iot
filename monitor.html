@@ -28,9 +28,10 @@
       <div class="settings-container">
         <h2 class="form-name">Ustawienia widoku</h2>
         <form action="/display" method="POST">
-          <!-- ======================= WIDOCZNE NA EKRANIE ======================= -->
-          <div class="monitor">
-            <h2 class="form-name__wrapper">Widoczne na ekranie</h2>
+          <div class="container flex">
+            <!-- ======================= WIDOCZNE NA EKRANIE ======================= -->
+            <div class="monitor">
+              <h2 class="form-name__wrapper">Widoczne na ekranie</h2>
               <table>
                 <tr>
                   <th></th>
@@ -38,11 +39,11 @@
                 </tr>
                 %WIDGETS_VISIBLE%
               </table>
-          </div>
+            </div>
 
-          <!-- ======================= NIEWIDOCZNE NA EKRANIE ======================= -->
-          <div class="monitor">
-            <h2 class="form-name__wrapper">Niewidoczne na ekranie</h2>
+            <!-- ======================= NIEWIDOCZNE NA EKRANIE ======================= -->
+            <div class="monitor">
+              <h2 class="form-name__wrapper">Niewidoczne na ekranie</h2>
               <table>
                 <tr>
                   <th width="50px"></th>
@@ -50,6 +51,7 @@
                 </tr>
                 %WIDGETS_UNVISIBLE%
               </table>
+            </div>
           </div>
           <div style="clear: both"></div>
           <button type="submit" name="action" value="APPLY" class="btn mt-2">

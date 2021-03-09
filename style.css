@@ -711,8 +711,8 @@ input:checked + .slider:before {
   padding: auto;
   justify-content: center;
   vertical-align: middle;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -733,4 +733,3 @@ input:checked + .slider:before {
 .monitor-btn_add {
   background: url(add.svg) no-repeat center center;
 }
-
