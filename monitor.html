@@ -25,14 +25,34 @@
         <form action="/display" method="POST">
           <!-- ======================= WIDOCZNE NA EKRANIE ======================= -->
           <div class="monitor">
-            <h3 class="form-name__wrapper">Widoczne na ekranie</h3>
-            %WIDGETS_VISIBLE%
+            <h2 class="form-name__wrapper">Widoczne na ekranie</h2>
+            <form>
+              <div class="form-control">
+              </div>
+              <table>
+                <tr>
+                  <th></th>
+                  <th width="150px"></th>
+                </tr>
+                %WIDGETS_VISIBLE%        
+              </table>
+            </form>
           </div>
 
           <!-- ======================= NIEWIDOCZNE NA EKRANIE ======================= -->
           <div class="monitor">
-            <h3 class="form-name__wrapper">Niewidoczne na ekranie</h3>
-            %WIDGETS_UNVISIBLE%
+            <h2 class="form-name__wrapper">Niewidoczne na ekranie</h2>
+            <form>
+              <div class="form-control">
+              </div>
+              <table>
+                <tr>
+                  <th width="50px"></th>
+                  <th></th>
+                </tr>
+                %WIDGETS_UNVISIBLE% 
+              </table>
+            </form>           
           <button type="submit" name="action" value="APPLY" class="btn  mt-2" /> OK </button>
         </form>
       </div>

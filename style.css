@@ -691,4 +691,16 @@ input:checked + .slider:before {
 
 .monitor-btn_icon {
   padding-bottom: 8px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 16px;
+  display: inline-block;
+  padding: auto;
+  justify-content: center;
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
 }
