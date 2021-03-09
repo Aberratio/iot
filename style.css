@@ -717,3 +717,20 @@ input:checked + .slider:before {
   cursor: pointer;
   border-radius: 5px;
 }
+
+.monitor-btn_trash {
+  background: url(trash.svg) no-repeat center center;
+}
+
+.monitor-btn_up {
+  background: url(up.svg) no-repeat center center;
+}
+
+.monitor-btn_down {
+  background: url(down.svg) no-repeat center center;
+}
+
+.monitor-btn_add {
+  background: url(add.svg) no-repeat center center;
+}
+
