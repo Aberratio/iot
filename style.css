@@ -674,6 +674,13 @@ input:checked + .slider:before {
   margin-bottom: 30px;
 }
 
+@media (min-width: 450px) {
+  .device {
+    float: left;
+    margin-left: 20px;
+  }
+}
+
 /* Monitor */
 
 .form-monitor__wrapper {

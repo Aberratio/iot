@@ -23,7 +23,403 @@
       <div class="settings-container">
         <h2 class="form-name">Ustawienia powiadomień</h2>
         <form action="/sensors" method="POST">
-          %SENSORS%
+          <div class="device">
+            <h3 class="form-name__wrapper">%NAME%</h3>
+            <div class="form-device__wrapper">
+              <div class="form-control">
+                <div class="field">
+                  <input
+                    type="number"
+                    name="%NAME_ALERT_LO%"
+                    id="%NAME_ALERT_LO%"
+                    value="%ALERT_LO%"
+                    min="%LO_MIN%"
+                    max="%LO_MAX%"
+                    step="%STEP%"
+                    pattern=".+"
+                    placeholder="alert poniżej"
+                    autocomplete="off"
+                  />
+                  <label for="%NAME_ALERT_LO%" class="floating_label"
+                    >alert poniżej</label
+                  >
+                </div>
+              </div>
+              <div class="form-control">
+                <div class="field">
+                  <input
+                    type="number"
+                    name="%NAME_ALERT_HI%"
+                    id="%NAME_ALERT_HI%"
+                    value="%ALERT_HI%"
+                    min="%HI_MIN%"
+                    max="%HI_MAX%"
+                    step="%STEP%"
+                    pattern=".+"
+                    placeholder="alert powyżej"
+                    autocomplete="off"
+                  />
+                  <label for="%NAME_ALERT_HI%" class="floating_label"
+                    >alert powyżej</label
+                  >
+                </div>
+              </div>
+              <div class="form-control form__wrapper">
+                <p>Alert na dashboardzie</p>
+                <label class="switch">
+                  <input
+                    type="checkbox"
+                    name="%NAME_NOTIF_DASH%"
+                    %NOTIF_DASH%
+                    value="true"
+                  />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div class="form-control form__wrapper">
+                <p>Alert na push</p>
+                <label class="switch">
+                  <input
+                    type="checkbox"
+                    name="%NAME_NOTIF_PUSH%"
+                    %NOTIF_PUSH%
+                    value="true"
+                  />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div class="form-control form__wrapper">
+                <p>Alert na mail</p>
+                <label class="switch">
+                  <input
+                    type="checkbox"
+                    name="%NAME_NOTIF_MAIL%"
+                    %NOTIF_MAIL%
+                    value="true"
+                  />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="device">
+            <h3 class="form-name__wrapper">%NAME%</h3>
+            <div class="form-device__wrapper">
+              <div class="form-control">
+                <div class="field">
+                  <input
+                    type="number"
+                    name="%NAME_ALERT_LO%"
+                    id="%NAME_ALERT_LO%"
+                    value="%ALERT_LO%"
+                    min="%LO_MIN%"
+                    max="%LO_MAX%"
+                    step="%STEP%"
+                    pattern=".+"
+                    placeholder="alert poniżej"
+                    autocomplete="off"
+                  />
+                  <label for="%NAME_ALERT_LO%" class="floating_label"
+                    >alert poniżej</label
+                  >
+                </div>
+              </div>
+              <div class="form-control">
+                <div class="field">
+                  <input
+                    type="number"
+                    name="%NAME_ALERT_HI%"
+                    id="%NAME_ALERT_HI%"
+                    value="%ALERT_HI%"
+                    min="%HI_MIN%"
+                    max="%HI_MAX%"
+                    step="%STEP%"
+                    pattern=".+"
+                    placeholder="alert powyżej"
+                    autocomplete="off"
+                  />
+                  <label for="%NAME_ALERT_HI%" class="floating_label"
+                    >alert powyżej</label
+                  >
+                </div>
+              </div>
+              <div class="form-control form__wrapper">
+                <p>Alert na dashboardzie</p>
+                <label class="switch">
+                  <input
+                    type="checkbox"
+                    name="%NAME_NOTIF_DASH%"
+                    %NOTIF_DASH%
+                    value="true"
+                  />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div class="form-control form__wrapper">
+                <p>Alert na push</p>
+                <label class="switch">
+                  <input
+                    type="checkbox"
+                    name="%NAME_NOTIF_PUSH%"
+                    %NOTIF_PUSH%
+                    value="true"
+                  />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div class="form-control form__wrapper">
+                <p>Alert na mail</p>
+                <label class="switch">
+                  <input
+                    type="checkbox"
+                    name="%NAME_NOTIF_MAIL%"
+                    %NOTIF_MAIL%
+                    value="true"
+                  />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="device">
+            <h3 class="form-name__wrapper">%NAME%</h3>
+            <div class="form-device__wrapper">
+              <div class="form-control">
+                <div class="field">
+                  <input
+                    type="number"
+                    name="%NAME_ALERT_LO%"
+                    id="%NAME_ALERT_LO%"
+                    value="%ALERT_LO%"
+                    min="%LO_MIN%"
+                    max="%LO_MAX%"
+                    step="%STEP%"
+                    pattern=".+"
+                    placeholder="alert poniżej"
+                    autocomplete="off"
+                  />
+                  <label for="%NAME_ALERT_LO%" class="floating_label"
+                    >alert poniżej</label
+                  >
+                </div>
+              </div>
+              <div class="form-control">
+                <div class="field">
+                  <input
+                    type="number"
+                    name="%NAME_ALERT_HI%"
+                    id="%NAME_ALERT_HI%"
+                    value="%ALERT_HI%"
+                    min="%HI_MIN%"
+                    max="%HI_MAX%"
+                    step="%STEP%"
+                    pattern=".+"
+                    placeholder="alert powyżej"
+                    autocomplete="off"
+                  />
+                  <label for="%NAME_ALERT_HI%" class="floating_label"
+                    >alert powyżej</label
+                  >
+                </div>
+              </div>
+              <div class="form-control form__wrapper">
+                <p>Alert na dashboardzie</p>
+                <label class="switch">
+                  <input
+                    type="checkbox"
+                    name="%NAME_NOTIF_DASH%"
+                    %NOTIF_DASH%
+                    value="true"
+                  />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div class="form-control form__wrapper">
+                <p>Alert na push</p>
+                <label class="switch">
+                  <input
+                    type="checkbox"
+                    name="%NAME_NOTIF_PUSH%"
+                    %NOTIF_PUSH%
+                    value="true"
+                  />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div class="form-control form__wrapper">
+                <p>Alert na mail</p>
+                <label class="switch">
+                  <input
+                    type="checkbox"
+                    name="%NAME_NOTIF_MAIL%"
+                    %NOTIF_MAIL%
+                    value="true"
+                  />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="device">
+            <h3 class="form-name__wrapper">%NAME%</h3>
+            <div class="form-device__wrapper">
+              <div class="form-control">
+                <div class="field">
+                  <input
+                    type="number"
+                    name="%NAME_ALERT_LO%"
+                    id="%NAME_ALERT_LO%"
+                    value="%ALERT_LO%"
+                    min="%LO_MIN%"
+                    max="%LO_MAX%"
+                    step="%STEP%"
+                    pattern=".+"
+                    placeholder="alert poniżej"
+                    autocomplete="off"
+                  />
+                  <label for="%NAME_ALERT_LO%" class="floating_label"
+                    >alert poniżej</label
+                  >
+                </div>
+              </div>
+              <div class="form-control">
+                <div class="field">
+                  <input
+                    type="number"
+                    name="%NAME_ALERT_HI%"
+                    id="%NAME_ALERT_HI%"
+                    value="%ALERT_HI%"
+                    min="%HI_MIN%"
+                    max="%HI_MAX%"
+                    step="%STEP%"
+                    pattern=".+"
+                    placeholder="alert powyżej"
+                    autocomplete="off"
+                  />
+                  <label for="%NAME_ALERT_HI%" class="floating_label"
+                    >alert powyżej</label
+                  >
+                </div>
+              </div>
+              <div class="form-control form__wrapper">
+                <p>Alert na dashboardzie</p>
+                <label class="switch">
+                  <input
+                    type="checkbox"
+                    name="%NAME_NOTIF_DASH%"
+                    %NOTIF_DASH%
+                    value="true"
+                  />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div class="form-control form__wrapper">
+                <p>Alert na push</p>
+                <label class="switch">
+                  <input
+                    type="checkbox"
+                    name="%NAME_NOTIF_PUSH%"
+                    %NOTIF_PUSH%
+                    value="true"
+                  />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div class="form-control form__wrapper">
+                <p>Alert na mail</p>
+                <label class="switch">
+                  <input
+                    type="checkbox"
+                    name="%NAME_NOTIF_MAIL%"
+                    %NOTIF_MAIL%
+                    value="true"
+                  />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="device">
+            <h3 class="form-name__wrapper">%NAME%</h3>
+            <div class="form-device__wrapper">
+              <div class="form-control">
+                <div class="field">
+                  <input
+                    type="number"
+                    name="%NAME_ALERT_LO%"
+                    id="%NAME_ALERT_LO%"
+                    value="%ALERT_LO%"
+                    min="%LO_MIN%"
+                    max="%LO_MAX%"
+                    step="%STEP%"
+                    pattern=".+"
+                    placeholder="alert poniżej"
+                    autocomplete="off"
+                  />
+                  <label for="%NAME_ALERT_LO%" class="floating_label"
+                    >alert poniżej</label
+                  >
+                </div>
+              </div>
+              <div class="form-control">
+                <div class="field">
+                  <input
+                    type="number"
+                    name="%NAME_ALERT_HI%"
+                    id="%NAME_ALERT_HI%"
+                    value="%ALERT_HI%"
+                    min="%HI_MIN%"
+                    max="%HI_MAX%"
+                    step="%STEP%"
+                    pattern=".+"
+                    placeholder="alert powyżej"
+                    autocomplete="off"
+                  />
+                  <label for="%NAME_ALERT_HI%" class="floating_label"
+                    >alert powyżej</label
+                  >
+                </div>
+              </div>
+              <div class="form-control form__wrapper">
+                <p>Alert na dashboardzie</p>
+                <label class="switch">
+                  <input
+                    type="checkbox"
+                    name="%NAME_NOTIF_DASH%"
+                    %NOTIF_DASH%
+                    value="true"
+                  />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div class="form-control form__wrapper">
+                <p>Alert na push</p>
+                <label class="switch">
+                  <input
+                    type="checkbox"
+                    name="%NAME_NOTIF_PUSH%"
+                    %NOTIF_PUSH%
+                    value="true"
+                  />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div class="form-control form__wrapper">
+                <p>Alert na mail</p>
+                <label class="switch">
+                  <input
+                    type="checkbox"
+                    name="%NAME_NOTIF_MAIL%"
+                    %NOTIF_MAIL%
+                    value="true"
+                  />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+                                                  
+          <div style="clear: both"></div>
           <button type="submit" name="action" value="APPLY" class="btn mt-2" /> OK </button>
         </form>
       </div>
