@@ -689,6 +689,12 @@ input:checked + .slider:before {
   margin-bottom: 50px;
 }
 
+@media (min-width: 950px) {
+  .monitor {
+    float: left;
+  }
+}
+
 .monitor-btn_icon {
   padding-bottom: 8px;
   background-color: var(--primary-color);

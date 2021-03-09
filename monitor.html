@@ -11,10 +11,15 @@
     <!-- Navbar -->
     <div class="navbar">
       <div class="container flex">
-        <h1 class="logo"><a href="/">%NAME%</a> / <a href="/config">Ustawienia</a> / Pulpit</h1>
-          <div>
-            <a href="help.html" class="image_btn navbar-btn navbar-btn_question mt-1"></a>
-          </div>
+        <h1 class="logo">
+          <a href="/">%NAME%</a> / <a href="/config">Ustawienia</a> / Pulpit
+        </h1>
+        <div>
+          <a
+            href="help.html"
+            class="image_btn navbar-btn navbar-btn_question mt-1"
+          ></a>
+        </div>
       </div>
     </div>
 
@@ -27,14 +32,12 @@
           <div class="monitor">
             <h2 class="form-name__wrapper">Widoczne na ekranie</h2>
             <form>
-              <div class="form-control">
-              </div>
               <table>
                 <tr>
                   <th></th>
                   <th width="150px"></th>
                 </tr>
-                %WIDGETS_VISIBLE%        
+                %WIDGETS_VISIBLE%
               </table>
             </form>
           </div>
@@ -43,17 +46,19 @@
           <div class="monitor">
             <h2 class="form-name__wrapper">Niewidoczne na ekranie</h2>
             <form>
-              <div class="form-control">
-              </div>
               <table>
                 <tr>
                   <th width="50px"></th>
                   <th></th>
                 </tr>
-                %WIDGETS_UNVISIBLE% 
+                %WIDGETS_UNVISIBLE%
               </table>
-            </form>           
-          <button type="submit" name="action" value="APPLY" class="btn  mt-2" /> OK </button>
+            </form>
+          </div>
+          <div style="clear: both"></div>
+          <button type="submit" name="action" value="APPLY" class="btn mt-2">
+            OK
+          </button>
         </form>
       </div>
     </section>
