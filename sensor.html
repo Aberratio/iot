@@ -5,6 +5,40 @@
       <div class="field">
         <input
           type="number"
+          name="%NAME_MIN%"
+          id="%NAME_MIN%"
+          value="%MIN%"
+          step="%STEP%"
+          pattern=".+"
+          placeholder="wartość minimalna"
+          autocomplete="off"
+        />
+        <label for="%NAME_MIN%" class="floating_label"
+          >wartość minimalna</label
+        >
+      </div>
+    </div>
+    <div class="form-control">
+      <div class="field">
+        <input
+          type="number"
+          name="%NAME_MAX%"
+          id="%NAME_MAX%"
+          value="%MAX%"
+          step="%STEP%"
+          pattern=".+"
+          placeholder="wartość maksymalna"
+          autocomplete="off"
+        />
+        <label for="%NAME_MAX%" class="floating_label"
+          >wartość maksymalna</label
+        >
+      </div>
+    </div>
+    <div class="form-control">
+      <div class="field">
+        <input
+          type="number"
           name="%NAME_ALERT_LO%"
           id="%NAME_ALERT_LO%"
           value="%ALERT_LO%"
@@ -75,5 +109,17 @@
         <span class="slider round"></span>
       </label>
     </div>
+      <div class="form-control form__wrapper">
+        <p>Alert dźwiękowy</p>
+        <label class="switch">
+          <input
+            type="checkbox"
+            name="%NAME_NOTIF_BEEP%"
+            %NOTIF_BEEP%
+            value="true"
+          />
+          <span class="slider round"></span>
+        </label>
+      </div>
   </div>
 </div>

@@ -49,6 +49,22 @@
       </div>
     </div>
 
+    <div id="infoModal" class="modal" style="display: %NOTIF_VISIBLE%">
+      <div class="modal-content">
+        <div class="modal-title">%NOTIFICATION%</div>
+        <form action="/config" method="POST">
+          <div class="container flex">
+            <button
+              type="submit"
+              name="action"
+              value="NOTIF_OK"
+              class="btn btn_medium ok_btn"
+            >OK</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <!-- Settings -->
     <section class="menu">
       <div class="settings-container">
