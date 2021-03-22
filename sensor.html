@@ -1,94 +1,95 @@
 <div class="device">
   <h3 class="form-name__wrapper">%NAME%</h3>
   <div class="form-device__wrapper">
-    <div class="form-control">
-      <div class="field">
+    <div class="form-control form-control--medium space-between">
+      <p class="text-primary form-control__description--left">
+        wartość minimalna
+      </p>
+      <div class="quantity-input">
         <input
+          class="form-control__input quantity-input__input input__border--all"
           type="number"
+          step="%STEP%"
+          value="%MIN%"
           name="%NAME_MIN%"
           id="%NAME_MIN%"
-          value="%MIN%"
-          step="%STEP%"
-          pattern=".+"
-          placeholder="wartość minimalna"
           autocomplete="off"
         />
-        <label for="%NAME_MIN%" class="floating_label"
-          >wartość minimalna</label
-        >
       </div>
     </div>
-    <div class="form-control">
-      <div class="field">
+
+    <div class="form-control form-control--medium space-between">
+      <p class="text-primary form-control__description--left">
+        wartość maksymalna
+      </p>
+      <div class="quantity-input">
         <input
+          class="form-control__input quantity-input__input input__border--all"
           type="number"
+          step="%STEP%"
+          value="%MAX%"
           name="%NAME_MAX%"
           id="%NAME_MAX%"
-          value="%MAX%"
-          step="%STEP%"
-          pattern=".+"
-          placeholder="wartość maksymalna"
           autocomplete="off"
         />
-        <label for="%NAME_MAX%" class="floating_label"
-          >wartość maksymalna</label
-        >
       </div>
     </div>
-    <div class="form-control">
-      <div class="field">
+
+    <div class="form-control form-control--medium space-between">
+      <p class="text-primary form-control__description--left">alert poniżej</p>
+      <div class="quantity-input">
         <input
+          class="form-control__input quantity-input__input input__border--all"
           type="number"
-          name="%NAME_ALERT_LO%"
-          id="%NAME_ALERT_LO%"
-          value="%ALERT_LO%"
+          step="%STEP%"
           min="%LO_MIN%"
           max="%LO_MAX%"
-          step="%STEP%"
-          pattern=".+"
-          placeholder="alert poniżej"
+          value="%ALERT_LO%"
+          name="%NAME_ALERT_LO%"
+          id="%NAME_ALERT_LO%"
           autocomplete="off"
         />
-        <label for="%NAME_ALERT_LO%" class="floating_label"
-          >alert poniżej</label
-        >
       </div>
     </div>
-    <div class="form-control">
-      <div class="field">
+
+    <div class="form-control form-control--medium space-between">
+      <p class="text-primary form-control__description--left">alert powyżej</p>
+      <div class="quantity-input">
         <input
+          class="form-control__input quantity-input__input input__border--all"
           type="number"
-          name="%NAME_ALERT_HI%"
-          id="%NAME_ALERT_HI%"
-          value="%ALERT_HI%"
+          step="%STEP%"
           min="%HI_MIN%"
           max="%HI_MAX%"
-          step="%STEP%"
-          pattern=".+"
-          placeholder="alert powyżej"
+          value="%ALERT_LO%"
+          name="%NAME_ALERT_HI%"
+          id="%NAME_ALERT_HI%"
           autocomplete="off"
         />
-        <label for="%NAME_ALERT_HI%" class="floating_label"
-          >alert powyżej</label
-        >
       </div>
     </div>
-    <div class="form-control form__wrapper">
-      <p>Alert na dashboardzie</p>
+
+    <div class="form-control space-between">
+      <p class="text-primary form-control__description--left">
+        Alert na dashboardzie
+      </p>
       <label class="switch">
         <input
-          type="checkbox"
+          class="form-control__input switch__input"
           name="%NAME_NOTIF_DASH%"
+          type="checkbox"
           %NOTIF_DASH%
           value="true"
         />
         <span class="slider round"></span>
       </label>
     </div>
-    <div class="form-control form__wrapper">
-      <p>Alert na push</p>
+
+    <div class="form-control space-between">
+      <p class="text-primary form-control__description--left">Alert na push</p>
       <label class="switch">
         <input
+          class="form-control__input switch__input"
           type="checkbox"
           name="%NAME_NOTIF_PUSH%"
           %NOTIF_PUSH%
@@ -97,10 +98,12 @@
         <span class="slider round"></span>
       </label>
     </div>
-    <div class="form-control form__wrapper">
-      <p>Alert na mail</p>
+
+    <div class="form-control space-between">
+      <p class="text-primary form-control__description--left">Alert na mail</p>
       <label class="switch">
         <input
+          class="form-control__input switch__input"
           type="checkbox"
           name="%NAME_NOTIF_MAIL%"
           %NOTIF_MAIL%
@@ -109,17 +112,21 @@
         <span class="slider round"></span>
       </label>
     </div>
-      <div class="form-control form__wrapper">
-        <p>Alert dźwiękowy</p>
-        <label class="switch">
-          <input
-            type="checkbox"
-            name="%NAME_NOTIF_BEEP%"
-            %NOTIF_BEEP%
-            value="true"
-          />
-          <span class="slider round"></span>
-        </label>
-      </div>
+
+    <div class="form-control space-between">
+      <p class="text-primary form-control__description--left">
+        Alert dźwiękowy
+      </p>
+      <label class="switch">
+        <input
+          class="form-control__input switch__input"
+          name="%NAME_NOTIF_BEEP%"
+          type="checkbox"
+          %NOTIF_BEEP%
+          value="true"
+        />
+        <span class="slider round"></span>
+      </label>
+    </div>
   </div>
 </div>

@@ -2,6 +2,8 @@
 :root {
   --primary-color: #00695c;
   --secondary-color: rgba(0, 105, 92, 0.38);
+  --font-label-size: 16px;
+  --placeholder-color: rgba(0, 0, 0, 0.309);
 }
 
 .mt-1 {
@@ -19,9 +21,14 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
-  line-height: 1.6;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin: 0;
 }
 
 ul {
@@ -68,11 +75,32 @@ img {
   text-align: center;
 }
 
-.container {
+.container_nav {
   max-width: 1100px;
   margin: 0 auto;
   overflow: auto;
   padding: 0 40px;
+  top: 0;
+  position: sticky;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px 40px;
+  border-radius: 5px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+.container a {
+  text-decoration: none;
+  color: var(--primary-color);
 }
 
 .circle-container {
@@ -85,6 +113,12 @@ img {
   justify-content: space-between;
   align-items: center;
   height: 100%;
+}
+
+.section-name {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: var(--primary-color);
 }
 
 /* ------ table ------ */
@@ -211,27 +245,6 @@ tr:nth-child(even) {
 }
 
 /* ------ forms ------ */
-
-.form-control {
-  color: rgb(0, 0, 0);
-}
-
-.form-control input,
-.field input,
-.form-control select {
-  font-size: 16px;
-  display: block;
-  margin: auto;
-  margin-bottom: 20px;
-  justify-content: center;
-  width: 270px;
-  height: 40px;
-  border: 1px solid var(--primary-color);
-  border-radius: 5px;
-  padding-left: 3px;
-  color: rgb(0, 0, 0) !important;
-}
-
 .input-with-button {
   font-size: 16px;
   color: rgb(85, 78, 78);
@@ -270,18 +283,9 @@ tr:nth-child(even) {
 
 .input-with-button input::placeholder,
 .input-with-button input,
-.form-control input::placeholder,
-.form-control input,
 .form-control_text-input {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: rgb(85, 78, 78);
-}
-.form-name {
-  color: var(--primary-color);
-  display: block;
-  text-align: center;
-  margin: auto;
-  margin-bottom: 30px;
 }
 
 .form__wrapper p {
@@ -327,151 +331,6 @@ tr:nth-child(even) {
   margin: auto;
   margin-bottom: 20px;
   color: var(--primary-color);
-}
-
-/* inputs */
-.field {
-  display: flex;
-  flex-flow: column-reverse;
-  margin-bottom: 1em;
-}
-
-label,
-input {
-  transition: all 0.2s;
-  touch-action: manipulation;
-}
-
-.floating_label {
-  width: 270px;
-  margin: auto;
-  display: inline;
-}
-
-input {
-  font-size: 1.2em;
-  border: 0;
-  border-bottom: 1px solid #ccc;
-  font-family: inherit;
-  -webkit-appearance: none;
-  border-radius: 0;
-  padding: 0;
-  cursor: text;
-}
-
-input:focus {
-  outline: 0;
-  border-bottom: 1px solid #666;
-}
-
-label {
-  letter-spacing: 0.05em;
-  font-size: 1em;
-  padding-left: 5px;
-}
-
-input:placeholder-shown + label {
-  cursor: text;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  transform-origin: left bottom;
-  transform: translate(0, 2rem) scale(1.1);
-  color: var(--primary-color);
-}
-
-::-webkit-input-placeholder {
-  opacity: 0;
-  transition: inherit;
-}
-
-input:focus::-webkit-input-placeholder {
-  opacity: 1;
-}
-
-input:not(:placeholder-shown) + label,
-input:focus + label {
-  transform: translate(0, 0) scale(1);
-  cursor: pointer;
-  color: var(--primary-color);
-  padding-left: 0px;
-}
-
-/* input with button */
-form.example .ssid {
-  float: left;
-  width: 80%;
-}
-
-form.example .image_btn {
-  float: left;
-  width: 20%;
-}
-
-form.example::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* switch */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 50px;
-  height: 28px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 20px;
-  width: 20px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: var(--primary-color);
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px var(--primary-color);
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(22px);
-  -ms-transform: translateX(22px);
-  transform: translateX(22px);
-}
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
 }
 
 /* ------ modal ------- */
@@ -528,7 +387,6 @@ input:checked + .slider:before {
   background-color: var(--primary-color);
   color: #fff;
   height: 70px;
-  position: fixed;
   width: 100%;
   font-size: 14px;
   z-index: 200;
@@ -697,6 +555,8 @@ input:checked + .slider:before {
 
 .monitor {
   margin-bottom: 50px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 @media (min-width: 950px) {
@@ -731,4 +591,485 @@ input:checked + .slider:before {
   width: 50%;
   height: 90%;
   padding-top: 10px;
+}
+
+/* ------ Buttons ------ */
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  padding: 15px;
+  font-family: inherit;
+  font-size: 18px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.button:focus {
+  outline: 0;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+.button-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.button-secondary {
+  background-color: var(--secondary-color);
+}
+
+.button-img {
+  width: 30px;
+  height: 30px;
+}
+
+.button-img--small {
+  width: 13px;
+  height: 13px;
+  margin: auto;
+}
+*/
+
+/* ------ ===============================CLEAN FRAMEWOR======================================= ------ */
+/* ------ ====================== UWAGA: nie zmieniać nic poniżej! ============================ ------ */
+/* ------ Text ------ */
+
+.text {
+  margin-top: 30px;
+}
+
+.text-primary {
+  font-size: var(--font-label-size);
+  line-height: 2;
+  color: var(--primary-color);
+}
+
+/* ------ Tools ------ */
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.border-radius {
+  border-radius: 5%;
+}
+
+/*Clearing Floats*/
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  zoom: 1;
+}
+
+/* ------ Form control ------ */
+
+.form-control {
+  position: relative;
+  width: 300px;
+}
+
+.form-name {
+  color: var(--primary-color);
+  display: block;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 30px;
+}
+
+@media (max-width: 450px) {
+  .form-control {
+    width: 250px;
+  }
+}
+
+.form-control--big {
+  margin: 20px 0 40px;
+}
+
+.form-control--medium {
+  margin: 20px 0 20px;
+}
+
+.form-control__input {
+  background-color: transparent;
+  border: 0;
+  display: block;
+  width: 100%;
+  line-height: 2;
+  color: #000;
+  padding-left: 2px;
+}
+
+.form-control__description--left {
+  padding-left: 2px;
+  float: left;
+}
+
+.form-control__input:focus,
+.form-control__input:valid,
+.form-control__input:not(:placeholder-shown) {
+  outline: 0;
+}
+
+.input__simple-label {
+  font-size: var(--font-label-size);
+  line-height: 1;
+  color: var(--primary-color);
+  margin: 0;
+  margin-bottom: 2px;
+  padding-left: 3px;
+}
+
+/* ------ Simple form control with single letter floating effect ------ */
+
+.simple-input__input:focus {
+  border-color: var(--primary-color);
+}
+
+.simple-input__label {
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+
+.simple-input__label span {
+  display: inline-block;
+  font-size: var(--font-label-size);
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  cursor: text;
+  color: var(--placeholder-color);
+}
+
+.simple-input__input:focus + label span,
+.simple-input__input:valid + label span,
+.simple-input__input:not(:placeholder-shown) + label span {
+  color: var(--primary-color);
+  transform: translateY(-30px);
+  line-height: 1;
+}
+
+/* ------ Border styles for form controls ------ */
+
+.input__border--down {
+  border-bottom: 1px var(--placeholder-color) solid;
+}
+
+.input__border--all {
+  border: 1px var(--placeholder-color) solid;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.input__label-space {
+  padding-left: 3px;
+  padding-top: 5px;
+}
+
+/* ------ Switch ------ */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+  border-radius: 34px;
+  margin: auto 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.switch__input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.309);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--primary-color);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--primary-color);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* ------ Input with button ------ */
+
+.button-input__input {
+  width: 80%;
+  height: 38px;
+  padding: 10px 5px;
+  float: left;
+  border-radius: 5px 0 0 5px;
+}
+
+.button-input__button {
+  overflow: visible;
+  position: relative;
+  float: right;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 38px;
+  width: 20%;
+  color: #fff;
+  background: var(--primary-color);
+  border-radius: 0 5px 5px 0;
+}
+
+.button-input__button:hover {
+  background: var(--primary-color);
+}
+
+.button-input__button:active,
+.button-input__button:focus {
+  background: var(--primary-color);
+  outline: 0;
+}
+
+.button-input__button:before {
+  /* left arrow */
+  content: "";
+  position: absolute;
+  border-width: 8px 8px 8px 0;
+  border-style: solid solid solid none;
+  border-color: transparent var(--primary-color) transparent;
+  top: 12px;
+  left: -6px;
+}
+
+.button-input__button:hover:before {
+  border-right-color: var(--primary-color);
+}
+
+.button-input__button:focus:before,
+.button-input__button:active:before {
+  border-right-color: var(--primary-color);
+}
+
+.button-input__button::-moz-focus-inner {
+  /* remove extra button spacing for Mozilla Firefox */
+  border: 0;
+  padding: 0;
+}
+
+/* ------ Input number ------ */
+
+.quantity-input {
+  position: relative;
+  margin: auto 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.quantity-input__input {
+  float: left;
+  padding: 0;
+  margin: 0;
+  height: 38px;
+  width: 100px;
+  padding-left: 5px;
+  font-size: var(--font-label-size);
+}
+
+.quantity-input__input:focus {
+  outline: 0;
+  border-color: var(--primary-color);
+}
+
+.quantity-input__button-container {
+  float: left;
+  position: relative;
+  height: 38px;
+}
+
+.quantity-input__button {
+  position: relative;
+  cursor: pointer;
+  border: none;
+  border-left: 1px solid var(--primary-color);
+  width: 21px;
+  text-align: center;
+  color: #fff;
+  padding: 0;
+  background: var(--primary-color);
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.quantity-input__button:active {
+  background: var(--primary-color);
+}
+
+.quantity-input__button.quantity-input__button-up {
+  position: absolute;
+  height: 50%;
+  top: 0;
+  border-bottom: 1px solid var(--primary-color);
+  border-radius: 0 5px 0 0;
+}
+
+.quantity-input__button.quantity-input__button-down {
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  border-radius: 0 0 5px 0;
+}
+
+/* ------ Single select drop-down ------ */
+.select-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.select-box .options-container {
+  background: #fff;
+  color: var(--placeholder-color);
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: hidden;
+
+  order: 1;
+  /* 
+  position: absolute;
+  z-index: 100;
+  margin-top: 45px; */
+}
+
+.selected {
+  background: #fff;
+  margin-bottom: 8px;
+  color: #000;
+  position: relative;
+
+  order: 0;
+}
+
+.selected:active {
+  border-color: var(--primary-color);
+}
+
+.selected::after {
+  content: "";
+  background: url("./arrow-down.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  height: 100%;
+  width: 32px;
+  right: 10px;
+  top: 5px;
+
+  transition: all 0.4s;
+}
+
+.select-box .options-container.active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.select-box .options-container.active + .selected::after {
+  transform: rotateX(180deg);
+  top: -6px;
+}
+
+.select-box .options-container::-webkit-scrollbar {
+  width: 8px;
+  background: #fff;
+  border-radius: 0 5px 20px 0;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 0 5px 5px 0;
+}
+
+.select-box .option,
+.selected {
+  padding: 9px 3px;
+  cursor: pointer;
+}
+
+.select-box .option:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.select-box label {
+  cursor: pointer;
+}
+
+.select-box .option .radio {
+  display: none;
 }

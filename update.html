@@ -10,11 +10,17 @@
   <body>
     <!-- Navbar -->
     <div class="navbar">
-      <div class="container flex">
-        <h1 class="logo"><a href="/">%NAME%</a> / <a href="/config">Ustawienia</a> / Aktualizacja</h1>
-          <div>
-            <a href="help.html" class="image_btn navbar-btn navbar-btn_question mt-1"></a>
-          </div>
+      <div class="container_nav flex">
+        <h1 class="logo">
+          <a href="/">%NAME%</a> / <a href="/config">Ustawienia</a> /
+          Aktualizacja
+        </h1>
+        <div>
+          <a
+            href="help.html"
+            class="image_btn navbar-btn navbar-btn_question mt-1"
+          ></a>
+        </div>
       </div>
     </div>
 
@@ -23,30 +29,38 @@
       <div class="settings-container">
         <h2 class="form-name">Wersje oprogramowania:</h2>
         <form action="/update" method="POST">
-          <div class="form-control">
-          </div>
-            <table>
-              <tr>
-                <th>wersja</th>
-                <th>opis</th>
-              </tr>
-              <tr>
-                <td>obecnie zainstalowana</td>
-                <td>%VERSION%</td>
-              </tr>
-              <tr>
-                <td>dostępna do aktualizacji</td>
-                <td>%UPDATE%</td>
-              </tr>
-            </table>
+          <div class="form-control"></div>
+          <table>
+            <tr>
+              <th>wersja</th>
+              <th>opis</th>
+            </tr>
+            <tr>
+              <td>obecnie zainstalowana</td>
+              <td>%VERSION%</td>
+            </tr>
+            <tr>
+              <td>dostępna do aktualizacji</td>
+              <td>%UPDATE%</td>
+            </tr>
+          </table>
 
-            <div class="form-control flex mt-2">
-              <button type="submit" name="action" value="APPLY_NEW_VERSION" class="btn btn_medium yes_btn" style="display:%NOTIF_VISIBLE%"> Aktualizuj </button>
-              <a href="/config"><button class="btn btn_medium no_btn"> Anuluj</button></a>
-            </div>
+          <div class="form-control flex mt-2">
+            <button
+              type="submit"
+              name="action"
+              value="APPLY_NEW_VERSION"
+              class="btn btn_medium yes_btn"
+              style="display: %NOTIF_VISIBLE%"
+            >
+              Aktualizuj
+            </button>
+            <a href="/config"
+              ><button class="btn btn_medium no_btn">Anuluj</button></a
+            >
+          </div>
         </form>
       </div>
     </section>
   </body>
-
 </html>

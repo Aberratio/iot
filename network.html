@@ -1,88 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>%NAME%</title>
+    <script type="text/javascript" src="./ajaxjquery.min.js"></script>
   </head>
-  <body> 
-  <!-- Navbar -->
-  <div class="navbar">
-    <div class="container flex">
-      <h1 class="logo"><a href="/">%NAME%</a> / <a href="/config">Ustawienia</a> / Połączenie</h1>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="container_nav flex">
+        <h1 class="logo">
+          <a href="/">%NAME%</a> / <a href="/config">Ustawienia</a> / Połączenie
+        </h1>
         <div>
-          <a href="help.html" class="image_btn navbar-btn navbar-btn_question mt-1"></a>
+          <a
+            href="help.html"
+            class="image_btn navbar-btn navbar-btn_question mt-1"
+          ></a>
         </div>
+      </div>
     </div>
-  </div>
 
-  <!-- Network Settings -->
-  <section class="menu">
-    <div class="settings-container">
-      <h2 class="form-name">Ustawienia połączeń sieciowych</h2>
+    <!-- Network Settings -->
+    <div class="container">
+      <h2 class="form-name">Ustawienia sieci</h2>
       <form action="/network" method="POST" class="example">
-        <div class="form-control">
-          <div class="field">
-            <input type="text" id="name" name="name" pattern=".+" placeholder="Nazwa urządzenia" required
-              autocomplete="off" value="%NAME%" />
-            <label for="name" class="floating_label">Nazwa urządzenia</label>
-          </div>
+        <div class="form-control form-control--big">
+          <input
+            class="form-control__input input__border--all simple-input__input"
+            type="text"
+            placeholder=" "
+            required
+            id="name"
+            name="name"
+            autocomplete="off"
+            value="%NAME%"
+          />
+          <label class="simple-input__label input__label-space" for="name"
+            >Nazwa urządzenia</label
+          >
         </div>
-        <div class="input-with-button"> 
-          <input name="ssid" class="form-control_text-input" placeholder=" Sieć WiFi" autocomplete="off" required="" value="%SSID%" type="text"> 
-          <button class="image_btn network-search_btn" type="submit" name="action" value="SELECT_WIFI" id="networkSearchButton">
-          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="project-diagram" class="image_on_button" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-            <path fill="currentColor" d="M384 320H256c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32V352c0-17.67-14.33-32-32-32zM192 32c0-17.67-14.33-32-32-32H32C14.33 0 0 14.33 0 32v128c0 17.67 14.33 32 32 32h95.72l73.16 128.04C211.98 300.98 232.4 288 256 288h.28L192 175.51V128h224V64H192V32zM608 0H480c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32V32c0-17.67-14.33-32-32-32z"></path>
-          </svg> 
-          </button> 
+
+        <div class="form-control form-control--big cf">
+          <input
+            class="form-control__input input__border--all button-input__input simple-input__input"
+            type="text"
+            placeholder=" "
+            required
+            autocomplete="off"
+            value="%SSID%"
+            id="ssid"
+            name="ssid"
+          />
+          <label class="simple-input__label input__label-space" for="ssid"
+            >Sieć WiFi</label
+          >
+          <button
+            class="button-input__button"
+            type="submit"
+            name="action"
+            value="SELECT_WIFI"
+            id="networkSearchButton"
+          >
+            <svg
+              class="button-img"
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="wifi"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 512"
+            >
+              <path
+                fill="currentColor"
+                d="M384 320H256c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32V352c0-17.67-14.33-32-32-32zM192 32c0-17.67-14.33-32-32-32H32C14.33 0 0 14.33 0 32v128c0 17.67 14.33 32 32 32h95.72l73.16 128.04C211.98 300.98 232.4 288 256 288h.28L192 175.51V128h224V64H192V32zM608 0H480c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32V32c0-17.67-14.33-32-32-32z"
+              ></path>
+            </svg>
+          </button>
         </div>
-        <div class="input-with-button"> 
-          <input name="my_ip" class="form-control_text-input" placeholder=" Ostatnia liczba IP" autocomplete="off" required="" value="%MY_IP%" type="number"> 
-          <button class="image_btn network-search_btn" type="submit" name="action" value="SELECT_IP" id="ipSearchButton">
-          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="project-diagram" class="image_on_button" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-            <path fill="currentColor" d="M384 320H256c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32V352c0-17.67-14.33-32-32-32zM192 32c0-17.67-14.33-32-32-32H32C14.33 0 0 14.33 0 32v128c0 17.67 14.33 32 32 32h95.72l73.16 128.04C211.98 300.98 232.4 288 256 288h.28L192 175.51V128h224V64H192V32zM608 0H480c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32V32c0-17.67-14.33-32-32-32z"></path>
-          </svg> 
-          </button> 
+
+        <div class="form-control form-control--big cf">
+          <input
+            class="form-control__input input__border--all button-input__input simple-input__input"
+            type="number"
+            placeholder=" "
+            required
+            autocomplete="off"
+            value="%MY_IP%"
+            id="my_ip"
+            name="my_ip"
+          />
+          <label class="simple-input__label input__label-space" for="my_ip"
+            >Ostatnia liczba IP</label
+          >
+          <button
+            class="button-input__button"
+            type="submit"
+            name="action"
+            value="SELECT_WIFI"
+            id="networkSearchButton"
+          >
+            <svg
+              class="button-img"
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="wifi"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 640 512"
+            >
+              <path
+                fill="currentColor"
+                d="M384 320H256c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32V352c0-17.67-14.33-32-32-32zM192 32c0-17.67-14.33-32-32-32H32C14.33 0 0 14.33 0 32v128c0 17.67 14.33 32 32 32h95.72l73.16 128.04C211.98 300.98 232.4 288 256 288h.28L192 175.51V128h224V64H192V32zM608 0H480c-17.67 0-32 14.33-32 32v128c0 17.67 14.33 32 32 32h128c17.67 0 32-14.33 32-32V32c0-17.67-14.33-32-32-32z"
+              ></path>
+            </svg>
+          </button>
         </div>
-        <div style="clear: both"></div>
-        <div class="form-control">
-          <div class="field">
-            <input type="password" name="pass" id="pass" pattern=".+" placeholder="Hasło WiFi" required
-              autocomplete="off" value="%PASS%" />
-            <label for="pass" class="floating_label">Hasło WiFi</label>
-          </div>
+
+        <div class="form-control form-control--big">
+          <input
+            class="form-control__input input__border--all simple-input__input"
+            type="password"
+            placeholder=" "
+            required
+            id="pass"
+            name="pass"
+            autocomplete="off"
+            value="%PASS%"
+          />
+          <label class="simple-input__label input__label-space" for="pass"
+            >Hasło WiFi</label
+          >
         </div>
-        <div class="form-control form__wrapper">
-          <p>Acces Point dostępny</p>
+
+        <div class="form-control space-between form-control--big">
+          <p class="text-primary form-control__description--left">
+            Acces Point dostępny
+          </p>
           <label class="switch">
-            <input name="my_AP" type="checkbox" %MY_AP% value="true" type="checkbox" />
+            <input
+              class="form-control__input switch__input"
+              name="my_AP"
+              type="checkbox"
+              value="true"
+              %MY_AP%
+            />
             <span class="slider round"></span>
           </label>
         </div>
-        <div class="form-control">
-          <div class="field">
-            <input type="text" name="my_ssid" id="my_ssid" pattern=".+" placeholder="Nazwa Access Point"
-              autocomplete="off" value="%MY_SSID%" />
-            <label for="my_ssid" class="floating_label">Nazwa Access Point</label>
-          </div>
-        </div>
-        <div class="form-control">
-          <div class="field">
-            <input type="password" name="my_pass" id="my_pass" pattern=".+" placeholder="Hasło WiFi" autocomplete="off"
-              value="%MY_PASS%" />
-            <label for="my_pass" class="floating_label">Hasło WiFi</label>
-          </div>
+
+        <div class="form-control form-control--big">
+          <input
+            class="form-control__input input__border--all simple-input__input"
+            type="text"
+            placeholder=" "
+            required
+            id="my_ssid"
+            name="my_ssid"
+            autocomplete="off"
+            value="%MY_SSID%"
+          />
+          <label class="simple-input__label input__label-space" for="my_ssid"
+            >Nazwa Access Point</label
+          >
         </div>
 
-        <button type="submit" name="action" value="APPLY" class="btn mt-2" /> OK </button>
+        <div class="form-control form-control--big">
+          <input
+            class="form-control__input input__border--all simple-input__input"
+            type="password"
+            placeholder=" "
+            required
+            id="my_pass"
+            name="my_pass"
+            autocomplete="off"
+            value="%MY_PASS%"
+          />
+          <label class="simple-input__label input__label-space" for="my_pass"
+            >Hasło WiFi</label
+          >
+        </div>
+
+        <button
+          type="submit"
+          name="action"
+          value="APPLY"
+          class="button button-primary"
+        >
+          OK
+        </button>
       </form>
     </div>
-  </section>
-      <div class="footer">
-        <div class="container flex"></div>
-      </div>
-    </a>
+    <script src="./script.js"></script>
   </body>
 </html>

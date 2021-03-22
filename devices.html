@@ -2,19 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <title>%NAME%</title>
+    <script type="text/javascript" src="./ajaxjquery.min.js"></script>
   </head>
   <body>
     <!-- Navbar -->
     <div class="navbar">
-      <div class="container flex">
-        <h1 class="logo"><a href="/">%NAME%</a> / <a href="/config">Ustawienia</a> / Powiadomienia</h1>
-          <div>
-            <a href="help.html" class="image_btn navbar-btn navbar-btn_question mt-1"></a>
-          </div>
+      <div class="container_nav flex">
+        <h1 class="logo">
+          <a href="/">%NAME%</a> / <a href="/config">Ustawienia</a> /
+          Powiadomienia
+        </h1>
+        <div>
+          <a
+            href="help.html"
+            class="image_btn navbar-btn navbar-btn_question mt-1"
+          ></a>
+        </div>
       </div>
     </div>
 
@@ -29,22 +35,29 @@
               name="action"
               value="NOTIF_OK"
               class="btn btn_medium ok_btn"
-            >OK</button>
+            >
+              OK
+            </button>
           </div>
         </form>
       </div>
     </div>
 
     <!-- Devices Settings -->
-    <section class="menu">
-      <div class="settings-container">
-        <h2 class="form-name">Ustawienia powiadomień</h2>
-        <form action="/sensors" method="POST">
-          %SENSORS%                           
-          <div style="clear: both"></div>
-          <button type="submit" name="action" value="APPLY" class="btn mt-2" /> OK </button>
-        </form>
-      </div>
-    </section>
+    <div class="container">
+      <h1>Ustawienia powiadomień</h1>
+      <form action="/sensors" method="POST">
+        %SENSORS%
+        <button
+          type="submit"
+          name="action"
+          value="APPLY"
+          class="button button-primary"
+        >
+          OK
+        </button>
+      </form>
+    </div>
+    <script src="./script.js"></script>
   </body>
 </html>

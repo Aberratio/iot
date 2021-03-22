@@ -10,7 +10,7 @@
   <body>
     <!-- Navbar -->
     <div class="navbar">
-      <div class="container flex">
+      <div class="container_nav flex">
         <h1 class="logo">
           <a href="/">%NAME%</a> / <a href="/config">Ustawienia</a> / Pulpit
         </h1>
@@ -34,52 +34,46 @@
               name="action"
               value="NOTIF_OK"
               class="btn btn_medium ok_btn"
-            >OK</button>
+            >
+              OK
+            </button>
           </div>
         </form>
       </div>
     </div>
 
     <!-- Monitor Settings -->
-    <section class="menu">
-      <div class="settings-container">
-        <h1 class="form-name">Ustawienia widoku</h1>
-        <form action="/display" method="POST">
-          <div class="container monitor-flex">
-            <!-- ======================= WIDOCZNE NA EKRANIE ======================= -->
-            <div class="monitor">
-              <h2 class="form-name__wrapper">Widoczne na ekranie</h2>
-              <table>
-                <tr>
-                  <th></th>
-                  <th width="146px"></th>
-                </tr>
-                %WIDGETS_VISIBLE%
-              </table>
-            </div>
+    <h1 class="section-name">Ustawienia widoku</h1>
+    <form action="/display" method="POST">
+      <div class="container monitor-flex">
+        <!-- ======================= WIDOCZNE NA EKRANIE ======================= -->
+        <div class="monitor">
+          <h2 class="form-name__wrapper">Widoczne na ekranie</h2>
+          <table>
+            <tr>
+              <th></th>
+              <th width="146px"></th>
+            </tr>
+            %WIDGETS_VISIBLE%
+          </table>
+        </div>
 
-            <!-- ======================= NIEWIDOCZNE NA EKRANIE ======================= -->
-            <div class="monitor">
-              <h2 class="form-name__wrapper">Niewidoczne na ekranie</h2>
-              <table>
-                <tr>
-                  <th width="50px"></th>
-                  <th></th>
-                </tr>
-                %WIDGETS_UNVISIBLE%
-              </table>
-            </div>
-          </div>
-          <div style="clear: both"></div>
-          <button type="submit" name="action" value="APPLY" class="btn mt-2">
-            OK
-          </button>
-        </form>
+        <!-- ======================= NIEWIDOCZNE NA EKRANIE ======================= -->
+        <div class="monitor">
+          <h2 class="form-name__wrapper">Niewidoczne na ekranie</h2>
+          <table>
+            <tr>
+              <th width="50px"></th>
+              <th></th>
+            </tr>
+            %WIDGETS_UNVISIBLE%
+          </table>
+        </div>
       </div>
-    </section>
-
-    <div class="footer">
-      <div class="container flex"></div>
-    </div>
+      <div style="clear: both"></div>
+      <button type="submit" name="action" value="APPLY" class="btn mt-2">
+        OK
+      </button>
+    </form>
   </body>
 </html>
