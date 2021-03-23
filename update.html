@@ -28,7 +28,6 @@
     <section class="menu">
       <div class="settings-container">
         <h2 class="form-name">Wersje oprogramowania:</h2>
-        <form action="/update" method="POST">
           <div class="form-control"></div>
           <table>
             <tr>
@@ -46,20 +45,13 @@
           </table>
 
           <div class="form-control flex mt-2">
-            <button
-              type="submit"
-              name="action"
-              value="APPLY_NEW_VERSION"
-              class="btn btn_medium yes_btn"
-              style="display: %NOTIF_VISIBLE%"
-            >
-              Aktualizuj
-            </button>
-            <a href="/config"
-              ><button class="btn btn_medium no_btn">Anuluj</button></a
-            >
+            <a href="/update_go_17">
+              <button type="button" class="btn btn_medium yes_btn" style="display: %NOTIF_VISIBLE%">Aktualizuj</button>
+            </a>
+            <a href="/config">
+              <button type="button" class="btn btn_medium no_btn">Anuluj</button>
+            </a>
           </div>
-        </form>
       </div>
     </section>
   </body>
