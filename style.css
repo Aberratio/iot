@@ -16,6 +16,10 @@
   margin-top: 50px !important;
 }
 
+.mb-2 {
+  margin-bottom: 50px !important;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -536,6 +540,12 @@ tr:nth-child(even) {
 }
 
 /* Device */
+
+.devices_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
 .form-device__wrapper {
   background-color: var(--secondary-color);
