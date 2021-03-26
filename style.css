@@ -73,8 +73,14 @@ img {
 
 .dashboard {
   text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
+.dashboard svg {
+  margin: 5px;
+}
 .container_nav {
   max-width: 1100px;
   margin: 0 auto;
@@ -385,12 +391,15 @@ tr:nth-child(even) {
 /* ------ NAVBAR ------ */
 .navbar {
   background-color: var(--primary-color);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   color: #fff;
   height: 70px;
   width: 100%;
   font-size: 14px;
   z-index: 200;
   overflow: hidden;
+  position: fixed;
+  top: 0;
 }
 
 .navbar .flex {
