@@ -12,8 +12,27 @@
     <div class="navbar">
       <div class="container_nav flex">
         <h1 class="logo">
-          <a href="/">%NAME%</a> / <a href="/config">Ustawienia</a> /
-          Aktualizacja
+          <div class="page__section">
+            <nav class="breadcrumb breadcrumb_type" aria-label="Breadcrumb">
+              <ol class="breadcrumb__list r-list">
+                <li class="breadcrumb__group">
+                  <a href="/" class="breadcrumb__point r-link">%NAME%</a>
+                  <span class="breadcrumb__divider" aria-hidden="true">›</span>
+                </li>
+                <li class="breadcrumb__group">
+                  <a href="/config" class="breadcrumb__point r-link"
+                    >Ustawienia</a
+                  >
+                  <span class="breadcrumb__divider" aria-hidden="true">›</span>
+                </li>
+                <li class="breadcrumb__group">
+                  <span class="breadcrumb__point" aria-current="page"
+                    >Aktualizacja</span
+                  >
+                </li>
+              </ol>
+            </nav>
+          </div>
         </h1>
         <div>
           <a
@@ -28,30 +47,36 @@
     <section class="menu">
       <div class="settings-container">
         <h2 class="form-name">Wersje oprogramowania:</h2>
-          <div class="form-control"></div>
-          <table>
-            <tr>
-              <th>wersja</th>
-              <th>opis</th>
-            </tr>
-            <tr>
-              <td>obecnie zainstalowana</td>
-              <td>%VERSION%</td>
-            </tr>
-            <tr>
-              <td>dostępna do aktualizacji</td>
-              <td>%UPDATE%</td>
-            </tr>
-          </table>
+        <div class="form-control"></div>
+        <table>
+          <tr>
+            <th>wersja</th>
+            <th>opis</th>
+          </tr>
+          <tr>
+            <td>obecnie zainstalowana</td>
+            <td>%VERSION%</td>
+          </tr>
+          <tr>
+            <td>dostępna do aktualizacji</td>
+            <td>%UPDATE%</td>
+          </tr>
+        </table>
 
-          <div class="form-control flex mt-2">
-            <a href="/update_go_17">
-              <button type="button" class="btn btn_medium yes_btn" style="display: %NOTIF_VISIBLE%">Aktualizuj</button>
-            </a>
-            <a href="/config">
-              <button type="button" class="btn btn_medium no_btn">Anuluj</button>
-            </a>
-          </div>
+        <div class="form-control flex mt-2">
+          <a href="/update_go_17">
+            <button
+              type="button"
+              class="btn btn_medium yes_btn"
+              style="display: %NOTIF_VISIBLE%"
+            >
+              Aktualizuj
+            </button>
+          </a>
+          <a href="/config">
+            <button type="button" class="btn btn_medium no_btn">Anuluj</button>
+          </a>
+        </div>
       </div>
     </section>
   </body>

@@ -11,7 +11,23 @@
     <!-- Navbar -->
     <div class="navbar">
       <div class="container_nav flex">
-        <h1 class="logo"><a href="/">%NAME%</a> / Ustawienia</h1>
+        <h1 class="logo">
+          <div class="page__section">
+            <nav class="breadcrumb breadcrumb_type" aria-label="Breadcrumb">
+              <ol class="breadcrumb__list r-list">
+                <li class="breadcrumb__group">
+                  <a href="/" class="breadcrumb__point r-link">%NAME%</a>
+                  <span class="breadcrumb__divider" aria-hidden="true">›</span>
+                </li>
+                <li class="breadcrumb__group">
+                  <span class="breadcrumb__point" aria-current="page"
+                    >Ustawienia</span
+                  >
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </h1>
         <a
           href="help.html"
           class="image_btn navbar-btn navbar-btn_question mt-1"
@@ -126,11 +142,7 @@
             <svg class="image_on_menu_button" role="img"></svg>
           </button>
           <a href="/update">
-            <button
-              class="btn"
-              name="simpleButton"
-              type="button"
-            >
+            <button class="btn" name="simpleButton" type="button">
               Aktualizacja
             </button>
           </a>

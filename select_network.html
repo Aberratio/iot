@@ -12,8 +12,33 @@
     <div class="navbar">
       <div class="container_nav flex">
         <h1 class="logo">
-          <a href="/">%NAME%</a> / <a href="/config">Ustawienia</a> /
-          <a href="/network">Połączenie</a> / WiFi
+          <div class="page__section">
+            <nav class="breadcrumb breadcrumb_type" aria-label="Breadcrumb">
+              <ol class="breadcrumb__list r-list">
+                <li class="breadcrumb__group">
+                  <a href="/" class="breadcrumb__point r-link">%NAME%</a>
+                  <span class="breadcrumb__divider" aria-hidden="true">›</span>
+                </li>
+                <li class="breadcrumb__group">
+                  <a href="/config" class="breadcrumb__point r-link"
+                    >Ustawienia</a
+                  >
+                  <span class="breadcrumb__divider" aria-hidden="true">›</span>
+                </li>
+                <li class="breadcrumb__group">
+                  <a href="/network" class="breadcrumb__point r-link"
+                    >Połączenie</a
+                  >
+                  <span class="breadcrumb__divider" aria-hidden="true">›</span>
+                </li>
+                <li class="breadcrumb__group">
+                  <span class="breadcrumb__point" aria-current="page"
+                    >WiFi</span
+                  >
+                </li>
+              </ol>
+            </nav>
+          </div>
         </h1>
         <div>
           <a
