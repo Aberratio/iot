@@ -51,7 +51,7 @@
 
     <!-- Network Settings -->
     <h1 class="section-name">Lista dostępnych sieci:</h2>
-    <form action="/network" method="POST">
+    <form action="/network" method="POST" class="mb-2">
       <div class="form-control"></div>
       <table>
         <tr>
@@ -247,9 +247,12 @@
           </td>
         </tr>
       </table>
-      <button type="submit" name="action" value="APPLY_WIFI" class="btn mt-2">
+    </form>
+      
+    <div class="footer">
+      <button type="submit" name="action" value="APPLY_WIFI" class="btn">
         Żadna z powyższych
       </button>
-    </form>
+    </div>
   </body>
 </html>

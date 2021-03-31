@@ -64,11 +64,13 @@
 
     <!-- Devices Settings -->
     <h1 class="section-name">Ustawienia powiadomień</h1>
-    <form action="/sensors" class="devices_container" method="POST">
+    <form action="/sensors" class="devices_container mb-2" method="POST">
       %SENSORS%
-      <button type="submit" name="action" value="APPLY" class="btn mt-2">
-        OK
-      </button>
+      <div class="footer">
+        <button type="submit" name="action" value="APPLY" class="btn">
+          OK
+        </button>
+      </div>
     </form>
     <script src="./script.js"></script>
   </body>

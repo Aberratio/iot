@@ -100,7 +100,7 @@ img {
   background-color: #fff;
   padding: 20px 40px;
   border-radius: 5px;
-  margin-top: 50px;
+  margin-top: 10px;
   margin-bottom: 50px;
 }
 
@@ -435,6 +435,8 @@ tr:nth-child(even) {
   position: fixed;
   width: 100%;
   bottom: 0;
+  background-color: #fff;
+  padding-top: 10px;
 }
 
 .footer-button__container {
