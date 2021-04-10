@@ -1313,6 +1313,7 @@ input[type="range"]::-ms-fill-upper {
 .tooltip .tooltiptext {
   width: 100px;
   background-color: var(--primary-color);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   color: #fff;
   text-align: center;
   padding: 5px 0;
