@@ -11,7 +11,7 @@
     <!-- Navbar -->
     <div class="navbar">
       <div class="container_nav flex">
-        <h1 class="logo">
+        <h2 class="logo">
           <div class="page__section">
             <nav class="breadcrumb breadcrumb_type" aria-label="Breadcrumb">
               <ol class="breadcrumb__list r-list">
@@ -39,7 +39,7 @@
               </ol>
             </nav>
           </div>
-        </h1>
+        </h2>
         <div>
           <a
             href="help.html"
@@ -51,7 +51,7 @@
 
     <!-- Network Settings -->
     <h1 class="section-name">Lista dostępnych sieci:</h2>
-    <form action="/network" method="POST">
+    <form action="/network" method="POST" class="mb-2">
       <div class="form-control"></div>
       <table>
         <tr>
@@ -62,9 +62,12 @@
         </tr>
         %WIFI_LIST%
       </table>
-      <button type="submit" name="action" value="APPLY_WIFI" class="btn mt-2">
+    </form>
+      
+    <div class="footer">
+      <button type="submit" name="action" value="APPLY_WIFI" class="btn">
         Żadna z powyższych
       </button>
-    </form>
+    </div>
   </body>
 </html>

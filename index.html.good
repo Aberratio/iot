@@ -12,7 +12,7 @@
     <!-- Navbar -->
     <div class="navbar">
       <div class="container flex">
-        <h1 class="logo">%NAME%</h1>
+        <h2 class="logo">%NAME%</h2>
         <div>
           <a href="\config" class="image_btn navbar-btn mt-1">
             <svg

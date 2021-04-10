@@ -11,7 +11,7 @@
     <!-- Navbar -->
     <div class="navbar">
       <div class="container_nav flex">
-        <h1 class="logo">
+        <h2 class="logo">
           <div class="page__section">
             <nav class="breadcrumb breadcrumb_type" aria-label="Breadcrumb">
               <ol class="breadcrumb__list r-list">
@@ -33,7 +33,7 @@
               </ol>
             </nav>
           </div>
-        </h1>
+        </h2>
         <div>
           <a
             href="help.html"
@@ -45,7 +45,7 @@
 
     <!-- Network Settings -->
     <h1 class="section-name">Ustawienia połączeń sieciowych</h1>
-    <form action="/network" method="POST" class="example">
+    <form action="/network" method="POST" class="example mb-2">
       <div class="form-control form-control--big">
         <input
           class="form-control__input input__border--all simple-input__input"
@@ -212,11 +212,11 @@
           >Hasło WiFi</label
         >
       </div>
-
-      <hr/><br/>
-
-      <button type="submit" name="action" value="APPLY" class="btn">OK</button>
     </form>
+    <hr/><br/>
+    <div class="footer">
+      <button type="submit" name="action" value="APPLY" class="btn">OK</button>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>

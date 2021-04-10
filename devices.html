@@ -11,7 +11,7 @@
     <!-- Navbar -->
     <div class="navbar">
       <div class="container_nav flex">
-        <h1 class="logo">
+        <h2 class="logo">
           <div class="page__section">
             <nav class="breadcrumb breadcrumb_type" aria-label="Breadcrumb">
               <ol class="breadcrumb__list r-list">
@@ -33,7 +33,7 @@
               </ol>
             </nav>
           </div>
-        </h1>
+        </h2>
         <div>
           <a
             href="help.html"
@@ -64,11 +64,13 @@
 
     <!-- Devices Settings -->
     <h1 class="section-name">Ustawienia powiadomień</h1>
-    <form action="/sensors" class="devices_container" method="POST">
+    <form action="/sensors" class="devices_container mb-2" method="POST">
       %SENSORS%
-      <button type="submit" name="action" value="APPLY" class="btn mt-2">
-        OK
-      </button>
+      <div class="footer">
+        <button type="submit" name="action" value="APPLY" class="btn">
+          OK
+        </button>
+      </div>
     </form>
     <script src="./script.js"></script>
   </body>

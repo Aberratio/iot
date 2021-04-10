@@ -35,6 +35,18 @@ body {
   justify-content: center;
   height: 100%;
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 ul {
@@ -100,7 +112,7 @@ img {
   background-color: #fff;
   padding: 20px 40px;
   border-radius: 5px;
-  margin-top: 50px;
+  margin-top: 10px;
   margin-bottom: 50px;
 }
 
@@ -435,6 +447,8 @@ tr:nth-child(even) {
   position: fixed;
   width: 100%;
   bottom: 0;
+  background-color: #fff;
+  padding-top: 10px;
 }
 
 .footer-button__container {
