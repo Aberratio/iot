@@ -49,47 +49,19 @@
   </section>
 
   <script>
+    getData("progress1", "getProgress1");
+    getData("progress2", "getProgress2");
+    getData("buttonOnFinish", "getButtonOnFinish");
 
-    setInterval(function () {
-      // Call a function repetatively with 2 Second interval
-      getData1();
-      getData2();
-      getButton();
-    }, 1000); //1000mSeconds update rate
-
-    function getData1() {
+    getData(id, name) {
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("progress1").innerHTML =
+          document.getElementById(id).innerHTML =
             this.responseText;
         }
       };
-      xhttp.open("GET", "getProgress1", true);
-      xhttp.send();
-    }
-
-    function getData2() {
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("progress2").innerHTML =
-            this.responseText;
-        }
-      };
-      xhttp.open("GET", "getProgress2", true);
-      xhttp.send();
-    }
-
-    function getButton() {
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          document.getElementById("buttonOnFinish").innerHTML =
-            this.responseText;
-        }
-      };
-      xhttp.open("GET", "getButtonOnFinish", true);
+      xhttp.open("GET", name, true);
       xhttp.send();
     }
 
