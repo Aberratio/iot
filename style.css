@@ -1304,7 +1304,7 @@ input[type="range"]::-ms-fill-upper {
   height: 100%;
 }
 
-/* tooltip style */
+/* tooltip */
 .tooltip {
   position: relative;
   padding: 30px 0;
@@ -1335,4 +1335,38 @@ input[type="range"]::-ms-fill-upper {
   margin-left: -5px;
   border-style: solid;
   border-color: transparent transparent transparent transparent;
+}
+
+/* time input */
+.time-input {
+  border: 1px var(--primary-color) solid;
+}
+
+/* radio input */
+input[type="radio"]:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+input[type="radio"]:checked:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: var(--primary-color);
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
 }
