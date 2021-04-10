@@ -41,43 +41,45 @@
 
     <!-- Leds settings -->
     <h1 class="section-name">Ustawienia diod</h2>
-        <form action="/config" method="POST" class="example">
-            <div class="form-control"></div>
-            <fieldset class="fieldset">
-                <legend class="fieldset-legend">Jasność</legend>
-                <table class="table--striped">
+        <fieldset class="fieldset">
+            <legend class="fieldset-legend">Jasność</legend>
+            <form action="/config" method="POST" style="overflow-x:auto;">
+                <table class="table--striped table--medium">
                     <tr>
-                        <th align="center">scenariusz</th>
-                        <th align="center">wartość</th>
-                        <th align="center">akcja</th>
+                        <th width="140px">Scenariusz</th>
+                        <th>Wartość</th>
+                        <th width="90px">Akcja</th>
                     </tr>
                     <tr>
-                        <td align="right">
-                            <div style="width: 120px;">
+                        <td>
+                            <div>
                                 <input type="radio" id="bri_s1" name="bri_scen" value="const" checked>
                                 stała
                             </div>
                         </td>
-                                <td><div class="tooltip">
-                                    <span class="tooltiptext" id="tooltiptext">50</span>
-                                  <input name="bri_const" type="range" min="0" max="100" value="%BRI%" id="myRange" onchange="rangeValFunc(this.value);">
-                                  </div></td>
-                        <td align="right">
-                            <div style="width: 180px;">
-                            <button type="submit" name="action" value="BRI_TEST" class="btn btn_medium ok_btn">
-                                Test
-                            </button>
+                        <td>
+                            <div class="tooltip">
+                                <span class="tooltiptext" id="tooltiptext">%BRI%</span>
+                                <input name="bri_const" type="range" min="0" max="100" value="%BRI%" id="myRange"
+                                    onchange="rangeValFunc(this.value);">
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <button type="submit" name="action" value="BRI_TEST" class="btn btn_medium ok_btn">
+                                    Test
+                                </button>
                             </div>
                         </td>
                     </tr>
                     <tr>
-                        <td align="right">
+                        <td>
                             <input type="radio" id="bri_s2" name="bri_scen" value="on_day" disabled>
                             w dzień
                         </td>
-                        <td align="left">
-                            <div style="width: 240px;">
-                                <p class="text-primary form-control__description--left">
+                        <td>
+                            <div>
+                                <p class="text-primary form-control__description--left mr-1">
                                     od
                                 </p>
                                 <div class="quantity-input">
@@ -85,7 +87,7 @@
                                         type="time" value="%BRI_FROM%" name="bri_from" id="bri_from"
                                         autocomplete="off" />
                                 </div>
-                                <p class="text-primary form-control__description--left">
+                                <p class="text-primary form-control__description--left mr-1 ml-1">
                                     do
                                 </p>
                                 <div class="quantity-input">
@@ -94,27 +96,23 @@
                                 </div>
                             </div>
                         </td>
-                        <td align="right"></td>
+                        <td></td>
                     </tr>
                     <tr>
-                        <td align="right" style="height: 60px;">
+                        <td>
                             <input type="radio" id="bri_s3" name="bri_scen" value="on_light" disabled>
                             automatyczna
                         </td>
-                        <td align="left"></td>
-                        <td align="right"></td>
+                        <td></td>
+                        <td></td>
                     </tr>
-
                 </table>
-
-            </fieldset>
-            </div>
-            <button type="submit" name="action" value="APPLY" class="btn mt-2">
-                OK
-            </button>
-
-        </form>
-
+            </form>
+        </fieldset>
+        </div>
+        <button type="submit" name="action" value="APPLY" class="btn mt-2">
+            OK
+        </button>
 </body>
 
 </html>

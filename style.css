@@ -20,6 +20,14 @@
   margin-bottom: 50px !important;
 }
 
+.mr-1 {
+  margin-right: 20px !important;
+}
+
+.ml-1 {
+  margin-left: 20px !important;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -108,6 +116,12 @@ img {
   position: sticky;
 }
 
+@media (max-width: 450px) {
+  .container_nav {
+    padding: 0 10px;
+  }
+}
+
 .container {
   background-color: #fff;
   padding: 20px 40px;
@@ -152,6 +166,10 @@ table {
   border-collapse: collapse;
   width: 450px;
   margin: auto;
+}
+
+.table--medium {
+  width: 600px;
 }
 
 @media (max-width: 450px) {
@@ -1201,6 +1219,20 @@ span.breadcrumb__point {
   border-radius: 8px;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 10px;
+}
+
+@media (max-width: 450px) {
+  .fieldset,
+  .fieldset form {
+    width: 300px;
+  }
+}
+
+@media (max-width: 310px) {
+  .fieldset,
+  .fieldset form {
+    width: 250px;
+  }
 }
 
 /* ------ input: range ------ */
