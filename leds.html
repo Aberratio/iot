@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>%NAME%</title>
+    <script type="text/javascript" src="./ajaxjquery.min.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="container_nav flex">
+            <h1 class="logo">
+                <div class="page__section">
+                    <nav class="breadcrumb breadcrumb_type" aria-label="Breadcrumb">
+                        <ol class="breadcrumb__list r-list">
+                            <li class="breadcrumb__group">
+                                <a href="/" class="breadcrumb__point r-link">%NAME%</a>
+                                <span class="breadcrumb__divider" aria-hidden="true">›</span>
+                            </li>
+                            <li class="breadcrumb__group">
+                                <a href="/config" class="breadcrumb__point r-link">Ustawienia</a>
+                                <span class="breadcrumb__divider" aria-hidden="true">›</span>
+                            </li>
+                            <li class="breadcrumb__group">
+                                <span class="breadcrumb__point" aria-current="page">Diody</span>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </h1>
+            <div>
+                <a href="help.html" class="image_btn navbar-btn navbar-btn_question mt-1"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leds settings -->
+    <h1 class="section-name">Ustawienia diod:</h2>
+        <form action="/config" method="POST" class="example">
+            <div class="form-control"></div>
+            <fieldset>
+                <legend>Jasność:</legend>
+                <table>
+                    <tr>
+                        <th align="center">scenariusz</th>
+                        <th align="center">wartość</th>
+                        <th align="center">akcja</th>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <div style="width: 120px;">
+                                <input type="radio" id="bri_s1" name="bri_scen" value="const" checked>
+                                stała
+                            </div>
+                        </td>
+                        <td align="left"><input name="bri_const" type="range" min="0" max="255" value="%BRI%"
+                                style="width: 240px;" /></td>
+                        <td align="right">
+                            <div style="width: 180px;">
+                            <button type="submit" name="action" value="BRI_TEST" class="btn btn_medium ok_btn">
+                                Test
+                            </button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <input type="radio" id="bri_s2" name="bri_scen" value="on_day" disabled>
+                            w dzień
+                        </td>
+                        <td align="left">
+                            <div style="width: 240px;">
+                                <p class="text-primary form-control__description--left">
+                                    od
+                                </p>
+                                <div class="quantity-input">
+                                    <input class="form-control__input quantity-input__input input__border--all"
+                                        type="time" value="%BRI_FROM%" name="bri_from" id="bri_from"
+                                        autocomplete="off" />
+                                </div>
+                                <p class="text-primary form-control__description--left">
+                                    do
+                                </p>
+                                <div class="quantity-input">
+                                    <input class="form-control__input quantity-input__input input__border--all"
+                                        type="time" value="%BRI_TO%" name="bri_to" id="bri_to" autocomplete="off" />
+                                </div>
+                            </div>
+                        </td>
+                        <td align="right"></td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="height: 60px;">
+                            <input type="radio" id="bri_s3" name="bri_scen" value="on_light" disabled>
+                            automatyczna
+                        </td>
+                        <td align="left"></td>
+                        <td align="right"></td>
+                    </tr>
+
+                </table>
+
+            </fieldset>
+            </div>
+            <button type="submit" name="action" value="APPLY" class="btn mt-2">
+                OK
+            </button>
+
+        </form>
+
+</body>
+
+</html>

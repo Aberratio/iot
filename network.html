@@ -44,7 +44,7 @@
     </div>
 
     <!-- Network Settings -->
-    <h1 class="section-name">Ustawienia sieci</h1>
+    <h1 class="section-name">Ustawienia połączeń sieciowych</h1>
     <form action="/network" method="POST" class="example">
       <div class="form-control form-control--big">
         <input
@@ -61,6 +61,8 @@
           >Nazwa urządzenia</label
         >
       </div>
+
+      <hr/><br/>
 
       <div class="form-control form-control--big cf">
         <input
@@ -99,6 +101,29 @@
             ></path>
           </svg>
         </button>
+      </div>
+
+      <div class="form-control space-between form-control--big">
+        <p class="text-primary form-control__description--left">
+          Siła sygnału: <b>%RSSI%</b>
+        </p>
+      </div>
+
+
+      <div class="form-control form-control--big">
+        <input
+          class="form-control__input input__border--all simple-input__input"
+          type="password"
+          placeholder=" "
+          required
+          id="pass"
+          name="pass"
+          autocomplete="off"
+          value="%PASS%"
+        />
+        <label class="simple-input__label input__label-space" for="pass"
+          >Hasło WiFi</label
+        >
       </div>
 
       <div class="form-control form-control--big cf">
@@ -140,21 +165,7 @@
         </button>
       </div>
 
-      <div class="form-control form-control--big">
-        <input
-          class="form-control__input input__border--all simple-input__input"
-          type="password"
-          placeholder=" "
-          required
-          id="pass"
-          name="pass"
-          autocomplete="off"
-          value="%PASS%"
-        />
-        <label class="simple-input__label input__label-space" for="pass"
-          >Hasło WiFi</label
-        >
-      </div>
+      <hr/><br/>
 
       <div class="form-control space-between form-control--big">
         <p class="text-primary form-control__description--left">
@@ -177,7 +188,6 @@
           class="form-control__input input__border--all simple-input__input"
           type="text"
           placeholder=" "
-          required
           id="my_ssid"
           name="my_ssid"
           autocomplete="off"
@@ -193,7 +203,6 @@
           class="form-control__input input__border--all simple-input__input"
           type="password"
           placeholder=" "
-          required
           id="my_pass"
           name="my_pass"
           autocomplete="off"
@@ -203,6 +212,8 @@
           >Hasło WiFi</label
         >
       </div>
+
+      <hr/><br/>
 
       <button type="submit" name="action" value="APPLY" class="btn">OK</button>
     </form>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>%NAME%</title>
+    <script type="text/javascript" src="./ajaxjquery.min.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="container_nav flex">
+          <h1 class="logo">
+            <div class="page__section">
+              <nav class="breadcrumb breadcrumb_type" aria-label="Breadcrumb">
+                <ol class="breadcrumb__list r-list">
+                  <li class="breadcrumb__group">
+                    <a href="/" class="breadcrumb__point r-link">%NAME%</a>
+                    <span class="breadcrumb__divider" aria-hidden="true">›</span>
+                  </li>
+                  <li class="breadcrumb__group">
+                    <a href="/config" class="breadcrumb__point r-link"
+                      >Ustawienia</a
+                    >
+                    <span class="breadcrumb__divider" aria-hidden="true">›</span>
+                  </li>
+                  <li class="breadcrumb__group">
+                    <span class="breadcrumb__point" aria-current="page"
+                      >Ukryte atrybuty</span
+                    >
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </h1>
+          <div>
+            <a
+              href="help.html"
+              class="image_btn navbar-btn navbar-btn_question mt-1"
+            ></a>
+          </div>
+        </div>
+      </div>
+  
+      <h1 class="section-name">Ukryte atrybuty urządzenia:</h2>
+        <form action="/deep.config" method="POST" class="example">
+
+            <fieldset>
+                <legend>Atrybuty czujnika światła</legend>
+                <table>
+                    <tr>
+                        <th align="center">Nazwa</th>
+                        <th align="center">Wartość</th>
+                        <th align="center">Uwagi</th>
+                    </tr>
+                    <tr>
+                        <td align="right">gain</td>
+                        <td align="left"><input name="gain" type="number" min="0" max="255" value="%GAIN%" /></td>
+                        <td align="right">0 - no gain, <br />
+                            1 - 2x gain, <br />
+                            2 - 16x gain, <br />
+                            3 - 60x gain. </td>
+                    </tr>
+                    <tr>
+                        <td align="right">integration time</td>
+                        <td align="left"><input name="itime" type="number" min="0" max="255" value="%ITIME%" /></td>
+                        <td align="right">255 - &lt;2.4ms, <br />
+                            246 - &lt;24ms, <br />
+                            235 - &lt;50ms, <br />
+                            213 - &lt;101ms, <br />
+                            192 - &lt;154ms, <br />
+                            0 - &lt;700ms. </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset>
+                <legend>Aktualizacja</legend>
+                <div class="form-control form-control--big">
+                    <input
+                      class="form-control__input input__border--all simple-input__input"
+                      type="text"
+                      placeholder=" "
+                      required
+                      id="update_server"
+                      name="update_server"
+                      autocomplete="off"
+                      value="%UPDATE_SERVER%"
+                    />
+                    <label class="simple-input__label input__label-space" for="update_server"
+                      >Serwer aktualizacji</label
+                    >
+                  </div>
+            </fieldset>
+
+            </div>
+            <button type="submit" name="action" value="APPLY" class="btn mt-2">
+                OK
+            </button>
+
+        </form>
+        <script src="./script.js"></script>
+</body>
+
+</html>
