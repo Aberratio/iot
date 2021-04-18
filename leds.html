@@ -41,9 +41,9 @@
 
     <!-- Leds settings -->
     <h1 class="section-name">Ustawienia diod</h2>
+            <form action="/config" method="POST" style="overflow-x:auto;">
         <fieldset class="fieldset">
             <legend class="fieldset-legend">Jasność</legend>
-            <form action="/config" method="POST" style="overflow-x:auto;">
                 <table class="table--striped table--medium">
                     <tr>
                         <th width="140px">Scenariusz</th>
@@ -107,12 +107,12 @@
                         <td></td>
                     </tr>
                 </table>
-            </form>
         </fieldset>
         </div>
         <button type="submit" name="action" value="APPLY" class="btn mt-2">
             OK
         </button>
+            </form>
 </body>
 
 </html>

@@ -1,132 +1,85 @@
-<div class="device">
-  <h3 class="form-name__wrapper">%NAME%</h3>
-  <div class="form-device__wrapper">
-    <div class="form-control form-control--medium space-between">
-      <p class="text-primary form-control__description--left">
-        wartość minimalna
-      </p>
-      <div class="quantity-input">
-        <input
-          class="form-control__input quantity-input__input input__border--all"
-          type="number"
-          step="%STEP%"
-          value="%MIN%"
-          name="%NAME_MIN%"
-          id="%NAME_MIN%"
-          autocomplete="off"
-        />
+<fieldset class="fieldset mb-2">
+  <legend class="fieldset-legend">%NAME%</legend>
+
+  <!--div class="device"-->
+    <!--div class="form-device__wrapper"-->
+      <div class="form-control form-control--medium space-between">
+        <p class="text-primary form-control__description--left">
+          wartość minimalna
+        </p>
+        <div class="quantity-input">
+          <input class="form-control__input quantity-input__input input__border--all" type="number" step="%STEP%"
+            value="%MIN%" name="%NAME_MIN%" id="%NAME_MIN%" autocomplete="off" />
+        </div>
       </div>
-    </div>
 
-    <div class="form-control form-control--medium space-between">
-      <p class="text-primary form-control__description--left">
-        wartość maksymalna
-      </p>
-      <div class="quantity-input">
-        <input
-          class="form-control__input quantity-input__input input__border--all"
-          type="number"
-          step="%STEP%"
-          value="%MAX%"
-          name="%NAME_MAX%"
-          id="%NAME_MAX%"
-          autocomplete="off"
-        />
+      <div class="form-control form-control--medium space-between">
+        <p class="text-primary form-control__description--left">
+          wartość maksymalna
+        </p>
+        <div class="quantity-input">
+          <input class="form-control__input quantity-input__input input__border--all" type="number" step="%STEP%"
+            value="%MAX%" name="%NAME_MAX%" id="%NAME_MAX%" autocomplete="off" />
+        </div>
       </div>
-    </div>
 
-    <div class="form-control form-control--medium space-between">
-      <p class="text-primary form-control__description--left">alert poniżej</p>
-      <div class="quantity-input">
-        <input
-          class="form-control__input quantity-input__input input__border--all"
-          type="number"
-          step="%STEP%"
-          min="%LO_MIN%"
-          max="%LO_MAX%"
-          value="%ALERT_LO%"
-          name="%NAME_ALERT_LO%"
-          id="%NAME_ALERT_LO%"
-          autocomplete="off"
-        />
+      <div class="form-control form-control--medium space-between">
+        <p class="text-primary form-control__description--left">alert poniżej</p>
+        <div class="quantity-input">
+          <input class="form-control__input quantity-input__input input__border--all" type="number" step="%STEP%"
+            min="%LO_MIN%" max="%LO_MAX%" value="%ALERT_LO%" name="%NAME_ALERT_LO%" id="%NAME_ALERT_LO%"
+            autocomplete="off" />
+        </div>
       </div>
-    </div>
 
-    <div class="form-control form-control--medium space-between">
-      <p class="text-primary form-control__description--left">alert powyżej</p>
-      <div class="quantity-input">
-        <input
-          class="form-control__input quantity-input__input input__border--all"
-          type="number"
-          step="%STEP%"
-          min="%HI_MIN%"
-          max="%HI_MAX%"
-          value="%ALERT_HI%"
-          name="%NAME_ALERT_HI%"
-          id="%NAME_ALERT_HI%"
-          autocomplete="off"
-        />
+      <div class="form-control form-control--medium space-between">
+        <p class="text-primary form-control__description--left">alert powyżej</p>
+        <div class="quantity-input">
+          <input class="form-control__input quantity-input__input input__border--all" type="number" step="%STEP%"
+            min="%HI_MIN%" max="%HI_MAX%" value="%ALERT_HI%" name="%NAME_ALERT_HI%" id="%NAME_ALERT_HI%"
+            autocomplete="off" />
+        </div>
       </div>
-    </div>
 
-    <div class="form-control space-between">
-      <p class="text-primary form-control__description--left">
-        Alert na dashboardzie
-      </p>
-      <label class="switch">
-        <input
-          class="form-control__input switch__input"
-          name="%NAME_NOTIF_DASH%"
-          type="checkbox"
-          %NOTIF_DASH%
-          value="true"
-        />
-        <span class="slider round"></span>
-      </label>
-    </div>
+      <div class="form-control space-between">
+        <p class="text-primary form-control__description--left">
+          Alert na dashboardzie
+        </p>
+        <label class="switch">
+          <input class="form-control__input switch__input" name="%NAME_NOTIF_DASH%" type="checkbox" %NOTIF_DASH%
+            value="true" />
+          <span class="slider round"></span>
+        </label>
+      </div>
 
-    <div class="form-control space-between">
-      <p class="text-primary form-control__description--left">Alert na push</p>
-      <label class="switch">
-        <input
-          class="form-control__input switch__input"
-          type="checkbox"
-          name="%NAME_NOTIF_PUSH%"
-          %NOTIF_PUSH%
-          value="true"
-        />
-        <span class="slider round"></span>
-      </label>
-    </div>
+      <div class="form-control space-between">
+        <p class="text-primary form-control__description--left">Alert na push</p>
+        <label class="switch">
+          <input class="form-control__input switch__input" type="checkbox" name="%NAME_NOTIF_PUSH%" %NOTIF_PUSH%
+            value="true" />
+          <span class="slider round"></span>
+        </label>
+      </div>
 
-    <div class="form-control space-between">
-      <p class="text-primary form-control__description--left">Alert na mail</p>
-      <label class="switch">
-        <input
-          class="form-control__input switch__input"
-          type="checkbox"
-          name="%NAME_NOTIF_MAIL%"
-          %NOTIF_MAIL%
-          value="true"
-        />
-        <span class="slider round"></span>
-      </label>
-    </div>
+      <div class="form-control space-between">
+        <p class="text-primary form-control__description--left">Alert na mail</p>
+        <label class="switch">
+          <input class="form-control__input switch__input" type="checkbox" name="%NAME_NOTIF_MAIL%" %NOTIF_MAIL%
+            value="true" />
+          <span class="slider round"></span>
+        </label>
+      </div>
 
-    <div class="form-control space-between">
-      <p class="text-primary form-control__description--left">
-        Alert dźwiękowy
-      </p>
-      <label class="switch">
-        <input
-          class="form-control__input switch__input"
-          name="%NAME_NOTIF_BEEP%"
-          type="checkbox"
-          %NOTIF_BEEP%
-          value="true"
-        />
-        <span class="slider round"></span>
-      </label>
-    </div>
-  </div>
-</div>
+      <div class="form-control space-between">
+        <p class="text-primary form-control__description--left">
+          Alert dźwiękowy
+        </p>
+        <label class="switch">
+          <input class="form-control__input switch__input" name="%NAME_NOTIF_BEEP%" type="checkbox" %NOTIF_BEEP%
+            value="true" />
+          <span class="slider round"></span>
+        </label>
+      </div>
+    <!--/div-->
+  <!--/div-->
+</fieldset>

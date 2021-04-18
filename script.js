@@ -76,6 +76,6 @@ selectedAll.forEach((selected) => {
 });
 
 function rangeValFunc(rangeVal){
-  document.getElementById("tooltiptext").textContent = Math.round(rangeVal * 2.55);
+  document.getElementById("tooltiptext").textContent = Math.round(rangeVal);
   document.getElementById("tooltiptext").style.left = "calc("+rangeVal+"% - 50px)";
 }

@@ -47,23 +47,30 @@
       <span id="buttonOnFinish"> </span>
     </div>
   </section>
+  <script src="./script.js"></script>
 
   <script>
-    getData("progress1", "getProgress1");
-    getData("progress2", "getProgress2");
-    getData("buttonOnFinish", "getButtonOnFinish");
-
-    getData(id, name) {
+    function getData(id, name) {
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
           document.getElementById(id).innerHTML =
             this.responseText;
-        }
+        };
       };
       xhttp.open("GET", name, true);
       xhttp.send();
     }
+
+    getData("progress1", "getProgress1");
+    getData("progress2", "getProgress2");
+    getData("buttonOnFinish", "getButtonOnFinish");
+
+    setInterval(function () {
+      getData("progress1", "getProgress1");
+      getData("progress2", "getProgress2");
+      getData("buttonOnFinish", "getButtonOnFinish");
+    }, 1000);	
 
 </script>
 </body>
