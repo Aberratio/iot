@@ -40,10 +40,10 @@
     </div>
 
     <!-- Leds settings -->
-    <h1 class="section-name">Ustawienia diod</h2>
-            <form action="/config" method="POST" style="overflow-x:auto;">
-        <fieldset class="fieldset">
-            <legend class="fieldset-legend">Jasność</legend>
+    <h1 class="section-name">Ustawienia diod</h1>
+        <form action="/config" method="POST" style="overflow-x:auto;">
+            <fieldset class="fieldset">
+                <legend class="fieldset-legend">Jasność</legend>
                 <table class="table--striped table--medium">
                     <tr>
                         <th width="140px">Scenariusz</th>
@@ -83,7 +83,8 @@
                                     od
                                 </p>
                                 <div>
-                                    <input class="form-control__input quantity-input__input input__border--all time-input"
+                                    <input
+                                        class="form-control__input quantity-input__input input__border--all time-input"
                                         type="time" value="%BRI_FROM%" name="bri_from" id="bri_from"
                                         autocomplete="off" />
                                 </div>
@@ -91,7 +92,8 @@
                                     do
                                 </p>
                                 <div>
-                                    <input class="form-control__input quantity-input__input input__border--all time-input"
+                                    <input
+                                        class="form-control__input quantity-input__input input__border--all time-input"
                                         type="time" value="%BRI_TO%" name="bri_to" id="bri_to" autocomplete="off" />
                                 </div>
                             </div>
@@ -107,12 +109,11 @@
                         <td></td>
                     </tr>
                 </table>
-        </fieldset>
-        </div>
-        <button type="submit" name="action" value="APPLY" class="btn mt-2">
-            OK
-        </button>
-            </form>
+            </fieldset>
+            <button type="submit" name="action" value="APPLY" class="btn mt-2">
+                OK
+            </button>
+        </form>
 </body>
 
 </html>
