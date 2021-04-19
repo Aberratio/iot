@@ -916,11 +916,16 @@ input:checked + .slider:before {
 /* ------ Input with button ------ */
 
 .button-input__input {
-  width: 80%;
+  width: 87%;
   height: 38px;
   padding: 10px 5px;
   float: left;
   border-radius: 5px 0 0 5px;
+}
+
+.button-input__image {
+  width: 70%; 
+  padding-top: 3px;
 }
 
 .button-input__button {
@@ -931,7 +936,7 @@ input:checked + .slider:before {
   padding: 0;
   cursor: pointer;
   height: 38px;
-  width: 20%;
+  width: 13%;
   color: #fff;
   background: var(--primary-color);
   border-radius: 0 5px 5px 0;

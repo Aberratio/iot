@@ -1,201 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>%NAME%</title>
-    <script type="text/javascript" src="./ajaxjquery.min.js"></script>
-  </head>
-  <body>
-    <!-- Navbar -->
-    <div class="navbar">
-      <div class="container_nav flex">
-        <h2 class="logo">
-          <div class="page__section">
-            <nav class="breadcrumb breadcrumb_type" aria-label="Breadcrumb">
-              <ol class="breadcrumb__list r-list">
-                <li class="breadcrumb__group">
-                  <a href="/" class="breadcrumb__point r-link">%NAME%</a>
-                  <span class="breadcrumb__divider" aria-hidden="true">›</span>
-                </li>
-                <li class="breadcrumb__group">
-                  <a href="/config" class="breadcrumb__point r-link"
-                    >Ustawienia</a
-                  >
-                  <span class="breadcrumb__divider" aria-hidden="true">›</span>
-                </li>
-                <li class="breadcrumb__group">
-                  <span class="breadcrumb__point" aria-current="page"
-                    >Połączenie</span
-                  >
-                </li>
-              </ol>
-            </nav>
-          </div>
-        </h2>
-        <div>
-          <a
-            href="help.html"
-            class="image_btn navbar-btn navbar-btn_question mt-1"
-          ></a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>%NAME%</title>
+  <script type="text/javascript" src="./ajaxjquery.min.js"></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="container_nav flex">
+      <h2 class="logo">
+        <div class="page__section">
+          <nav class="breadcrumb breadcrumb_type" aria-label="Breadcrumb">
+            <ol class="breadcrumb__list r-list">
+              <li class="breadcrumb__group">
+                <a href="/" class="breadcrumb__point r-link">%NAME%</a>
+                <span class="breadcrumb__divider" aria-hidden="true">›</span>
+              </li>
+              <li class="breadcrumb__group">
+                <a href="/config" class="breadcrumb__point r-link">Ustawienia</a>
+                <span class="breadcrumb__divider" aria-hidden="true">›</span>
+              </li>
+              <li class="breadcrumb__group">
+                <span class="breadcrumb__point" aria-current="page">Połączenie</span>
+              </li>
+            </ol>
+          </nav>
         </div>
+      </h2>
+      <div>
+        <a href="help.html" class="image_btn navbar-btn navbar-btn_question mt-1"></a>
       </div>
     </div>
+  </div>
 
-    <!-- Network Settings -->
-    <h1 class="section-name">Ustawienia połączeń sieciowych</h1>
-    <form action="/network" method="POST" class="example mb-2">
-      <fieldset class="fieldset mb-2">
-        <legend class="fieldset-legend">Ogólne</legend>
-        <div class="form-control form-control--medium">
-          <input
-            class="form-control__input input__border--all simple-input__input"
-            type="text"
-            placeholder=" "
-            required
-            id="name"
-            name="name"
-            autocomplete="off"
-            value="%NAME%"
-          />
-          <label class="simple-input__label input__label-space" for="name"
-            >Nazwa urządzenia</label
-          >
-        </div>
-      </fieldset>
+  <!-- Network Settings -->
+  <h1 class="section-name">Ustawienia połączeń sieciowych</h1>
+  <form action="/network" method="POST" class="example mb-2">
+    <fieldset class="fieldset mb-2">
+      <legend class="fieldset-legend">Ogólne</legend>
+      <div class="form-control form-control--medium">
+        <input class="form-control__input input__border--all simple-input__input" type="text" placeholder=" " required
+          id="name" name="name" autocomplete="off" value="%NAME%" />
+        <label class="simple-input__label input__label-space" for="name">Nazwa urządzenia</label>
+      </div>
+    </fieldset>
 
-      <fieldset class="fieldset mb-2">
-        <legend class="fieldset-legend">Sieć</legend>
+    <fieldset class="fieldset mb-2">
+      <legend class="fieldset-legend">Sieć</legend>
 
-        <div class="form-control form-control--big cf">
-          <input
-            class="form-control__input input__border--all button-input__input simple-input__input"
-            type="text"
-            placeholder=" "
-            required
-            autocomplete="off"
-            value="%SSID%"
-            id="ssid"
-            name="ssid"
-          />
-          <label class="simple-input__label input__label-space" for="ssid"
-            >Sieć WiFi</label
-          >
-          <button
-            class="button-input__button"
-            type="submit"
-            name="action"
-            value="SELECT_WIFI"
-            id="networkSearchButton"
-          >
-            <img src="wifi.svg" />
-          </button>
-          <div class="form-control space-between text-primary">
-            <p class="form-control__description--left">Siła sygnału:</p>
-            <p><b>%RSSI%</b></p>
-          </div>
-        </div>
+      <div class="form-control form-control--medium cf">
+        <input class="form-control__input input__border--all button-input__input simple-input__input" type="text"
+          placeholder=" " required autocomplete="off" value="%SSID%" id="ssid" name="ssid" />
+        <label class="simple-input__label input__label-space" for="ssid">Sieć WiFi</label>
+        <button class="button-input__button" type="submit" name="action" value="SELECT_WIFI" id="networkSearchButton">
+          <img class="button-input__image" src="list.svg" />
+        </button>
+      </div>
+      <div class="form-control space-between text-primary">
+        <p class="form-control__description--left">Siła sygnału:</p>
+        <p>%RSSI%</p>
+      </div>
+      <div class="form-control form-control--big">
+        <input class="form-control__input input__border--all simple-input__input" type="password" placeholder=" "
+          required id="pass" name="pass" autocomplete="off" value="%PASS%" />
+        <label class="simple-input__label input__label-space" for="pass">Hasło WiFi</label>
+      </div>
+      <div class="form-control form-control--medium cf">
+        <input class="form-control__input input__border--all button-input__input simple-input__input" type="number"
+          placeholder=" " required autocomplete="off" value="%MY_IP%" id="my_ip" name="my_ip" />
+        <label class="simple-input__label input__label-space" for="my_ip">Ostatnia liczba IP</label>
+        <button class="button-input__button" type="submit" name="action" value="SELECT_IP" id="networkSearchButton">
+          <img class="button-input__image" src="check.svg" />
+        </button>
+      </div>
+    </fieldset>
 
-        <div class="form-control form-control--big">
-          <input
-            class="form-control__input input__border--all simple-input__input"
-            type="password"
-            placeholder=" "
-            required
-            id="pass"
-            name="pass"
-            autocomplete="off"
-            value="%PASS%"
-          />
-          <label class="simple-input__label input__label-space" for="pass"
-            >Hasło WiFi</label
-          >
-        </div>
+    <fieldset class="fieldset mb-2">
+      <legend class="fieldset-legend">Acces Point</legend>
+      <div class="form-control space-between form-control--big" style="margin-top: 0">
+        <p class="text-primary form-control__description--left">
+          Acces Point dostępny
+        </p>
+        <label class="switch">
+          <input class="form-control__input switch__input" name="my_AP" type="checkbox" value="true" %MY_AP% />
+          <span class="slider round"></span>
+        </label>
+      </div>
 
-        <div class="form-control form-control--medium cf">
-          <input
-            class="form-control__input input__border--all button-input__input simple-input__input"
-            type="number"
-            placeholder=" "
-            required
-            autocomplete="off"
-            value="%MY_IP%"
-            id="my_ip"
-            name="my_ip"
-          />
-          <label class="simple-input__label input__label-space" for="my_ip"
-            >Ostatnia liczba IP</label
-          >
-          <button
-            class="button-input__button"
-            type="submit"
-            name="action"
-            value="SELECT_WIFI"
-            id="networkSearchButton"
-          >
-            <img src="wifi.svg" />
-          </button>
-        </div>
-      </fieldset>
+      <div class="form-control form-control--big">
+        <input class="form-control__input input__border--all simple-input__input" type="text" placeholder=" "
+          id="my_ssid" name="my_ssid" autocomplete="off" value="%MY_SSID%" />
+        <label class="simple-input__label input__label-space" for="my_ssid">Nazwa Access Point</label>
+      </div>
 
-      <fieldset class="fieldset mb-2">
-        <legend class="fieldset-legend">Acces Point</legend>
-        <div
-          class="form-control space-between form-control--big"
-          style="margin-top: 0"
-        >
-          <p class="text-primary form-control__description--left">
-            Acces Point dostępny
-          </p>
-          <label class="switch">
-            <input
-              class="form-control__input switch__input"
-              name="my_AP"
-              type="checkbox"
-              value="true"
-              %MY_AP%
-            />
-            <span class="slider round"></span>
-          </label>
-        </div>
-
-        <div class="form-control form-control--big">
-          <input
-            class="form-control__input input__border--all simple-input__input"
-            type="text"
-            placeholder=" "
-            id="my_ssid"
-            name="my_ssid"
-            autocomplete="off"
-            value="%MY_SSID%"
-          />
-          <label class="simple-input__label input__label-space" for="my_ssid"
-            >Nazwa Access Point</label
-          >
-        </div>
-
-        <div class="form-control form-control--medium">
-          <input
-            class="form-control__input input__border--all simple-input__input"
-            type="password"
-            placeholder=" "
-            id="my_pass"
-            name="my_pass"
-            autocomplete="off"
-            value="%MY_PASS%"
-          />
-          <label class="simple-input__label input__label-space" for="my_pass"
-            >Hasło WiFi</label
-          >
-        </div>
-      </fieldset>
+      <div class="form-control form-control--medium">
+        <input class="form-control__input input__border--all simple-input__input" type="password" placeholder=" "
+          id="my_pass" name="my_pass" autocomplete="off" value="%MY_PASS%" />
+        <label class="simple-input__label input__label-space" for="my_pass">Hasło WiFi</label>
+      </div>
+    </fieldset>
     <hr />
     <br />
     <div class="footer">
       <button type="submit" name="action" value="APPLY" class="btn">OK</button>
     </div>
-    </form>
-    <script src="./script.js"></script>
-  </body>
+  </form>
+  <script src="./script.js"></script>
+</body>
+
 </html>

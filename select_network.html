@@ -1,73 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>%NAME%</title>
-  </head>
-  <body>
-    <!-- Navbar -->
-    <div class="navbar">
-      <div class="container_nav flex">
-        <h2 class="logo">
-          <div class="page__section">
-            <nav class="breadcrumb breadcrumb_type" aria-label="Breadcrumb">
-              <ol class="breadcrumb__list r-list">
-                <li class="breadcrumb__group">
-                  <a href="/" class="breadcrumb__point r-link">%NAME%</a>
-                  <span class="breadcrumb__divider" aria-hidden="true">›</span>
-                </li>
-                <li class="breadcrumb__group">
-                  <a href="/config" class="breadcrumb__point r-link"
-                    >Ustawienia</a
-                  >
-                  <span class="breadcrumb__divider" aria-hidden="true">›</span>
-                </li>
-                <li class="breadcrumb__group">
-                  <a href="/network" class="breadcrumb__point r-link"
-                    >Połączenie</a
-                  >
-                  <span class="breadcrumb__divider" aria-hidden="true">›</span>
-                </li>
-                <li class="breadcrumb__group">
-                  <span class="breadcrumb__point" aria-current="page"
-                    >WiFi</span
-                  >
-                </li>
-              </ol>
-            </nav>
-          </div>
-        </h2>
-        <div>
-          <a
-            href="help.html"
-            class="image_btn navbar-btn navbar-btn_question mt-1"
-          ></a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>%NAME%</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="container_nav flex">
+      <h2 class="logo">
+        <div class="page__section">
+          <nav class="breadcrumb breadcrumb_type" aria-label="Breadcrumb">
+            <ol class="breadcrumb__list r-list">
+              <li class="breadcrumb__group">
+                <a href="/" class="breadcrumb__point r-link">%NAME%</a>
+                <span class="breadcrumb__divider" aria-hidden="true">›</span>
+              </li>
+              <li class="breadcrumb__group">
+                <a href="/config" class="breadcrumb__point r-link">Ustawienia</a>
+                <span class="breadcrumb__divider" aria-hidden="true">›</span>
+              </li>
+              <li class="breadcrumb__group">
+                <a href="/network" class="breadcrumb__point r-link">Połączenie</a>
+                <span class="breadcrumb__divider" aria-hidden="true">›</span>
+              </li>
+              <li class="breadcrumb__group">
+                <span class="breadcrumb__point" aria-current="page">WiFi</span>
+              </li>
+            </ol>
+          </nav>
         </div>
+      </h2>
+      <div>
+        <a href="help.html" class="image_btn navbar-btn navbar-btn_question mt-1"></a>
       </div>
     </div>
+  </div>
 
-    <!-- Network Settings -->
-    <h1 class="section-name">Lista dostępnych sieci:</h2>
+  <!-- Network Settings -->
+  <h1 class="section-name">Lista dostępnych sieci:</h2>
     <form action="/network" method="POST" class="mb-2">
-      <div class="form-control"></div>
-      <table class="table--striped" class="table--striped">
-        <tr>
-          <th>Nazwa sieci</th>
-          <th>RSSI</th>
-          <th></th>
-          <th></th>
-        </tr>
-        %WIFI_LIST%
-      </table>
+      <!--div class="form-control"></div-->
+      <fieldset class="fieldset">
+        <table class="table--striped" class="table--striped">
+          <tr>
+            <th>Nazwa sieci</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+          %WIFI_LIST%
+        </table>
+      </fieldset>
+
+      <div class="footer">
+        <button type="submit" name="action" value="APPLY_WIFI" class="btn">
+          Żadna z powyższych
+        </button>
+      </div>
     </form>
-      
-    <div class="footer">
-      <button type="submit" name="action" value="APPLY_WIFI" class="btn">
-        Żadna z powyższych
-      </button>
-    </div>
-  </body>
+</body>
+
 </html>
