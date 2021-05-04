@@ -1,77 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
-    <title>%NAME%</title>
-    <script type="text/javascript" src="./ajaxjquery.min.js"></script>
-  </head>
-  <body>
-    <!-- Navbar -->
-    <div class="navbar">
-      <div class="container_nav flex">
-        <h2 class="logo">
-          <div class="page__section">
-            <nav class="breadcrumb breadcrumb_type" aria-label="Breadcrumb">
-              <ol class="breadcrumb__list r-list">
-                <li class="breadcrumb__group">
-                  <a href="/" class="breadcrumb__point r-link">%NAME%</a>
-                  <span class="breadcrumb__divider" aria-hidden="true">›</span>
-                </li>
-                <li class="breadcrumb__group">
-                  <a href="/config" class="breadcrumb__point r-link"
-                    >Ustawienia</a
-                  >
-                  <span class="breadcrumb__divider" aria-hidden="true">›</span>
-                </li>
-                <li class="breadcrumb__group">
-                  <span class="breadcrumb__point" aria-current="page"
-                    >Powiadomienia</span
-                  >
-                </li>
-              </ol>
-            </nav>
-          </div>
-        </h2>
-        <div>
-          <a
-            href="help.html"
-            class="image_btn navbar-btn navbar-btn_question mt-1"
-          ></a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>%NAME%</title>
+  <script type="text/javascript" src="./ajaxjquery.min.js"></script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="container_nav flex">
+      <h2 class="logo">
+        <div class="page__section">
+          <nav class="breadcrumb breadcrumb_type" aria-label="Breadcrumb">
+            <ol class="breadcrumb__list r-list">
+              <li class="breadcrumb__group">
+                <a href="/" class="breadcrumb__point r-link">%NAME%</a>
+                <span class="breadcrumb__divider" aria-hidden="true">›</span>
+              </li>
+              <li class="breadcrumb__group">
+                <a href="/config" class="breadcrumb__point r-link">Ustawienia</a>
+                <span class="breadcrumb__divider" aria-hidden="true">›</span>
+              </li>
+              <li class="breadcrumb__group">
+                <span class="breadcrumb__point" aria-current="page">Powiadomienia</span>
+              </li>
+            </ol>
+          </nav>
         </div>
+      </h2>
+      <div>
+        <a href="/help#alerts" class="image_btn navbar-btn navbar-btn_question mt-1"></a>
       </div>
     </div>
+  </div>
 
-    <!-- Modal -->
-    <div id="infoModal" class="modal" style="display: %NOTIF_VISIBLE%">
-      <div class="modal-content">
-        <div class="modal-title">%NOTIFICATION%</div>
-        <form action="/sensors" method="POST">
-          <div class="container flex">
-            <button
-              type="submit"
-              name="action"
-              value="NOTIF_OK"
-              class="btn btn_medium ok_btn"
-            >
-              OK
-            </button>
-          </div>
-        </form>
-      </div>
+  <!-- Modal -->
+  <div id="infoModal" class="modal" style="display: %NOTIF_VISIBLE%">
+    <div class="modal-content">
+      <div class="modal-title">%NOTIFICATION%</div>
+      <form action="/sensors" method="POST">
+        <div class="container flex">
+          <button type="submit" name="action" value="NOTIF_OK" class="btn btn_medium ok_btn">
+            OK
+          </button>
+        </div>
+      </form>
     </div>
+  </div>
 
-    <!-- Devices Settings -->
-    <h1 class="section-name">Ustawienia powiadomień</h1>
-    <form action="/sensors" class="devices_container mb-2" method="POST">
-      %SENSORS%
-      <div class="footer">
-        <button type="submit" name="action" value="APPLY" class="btn">
-          OK
-        </button>
-      </div>
-    </form>
-    <script src="./script.js"></script>
-  </body>
+  <!-- Devices Settings -->
+  <h1 class="section-name">Ustawienia powiadomień</h1>
+  <form action="/sensors" class="devices_container mb-2" method="POST">
+    %SENSORS%
+    <div class="footer">
+      <button type="submit" name="action" value="APPLY" class="btn">
+        OK
+      </button>
+    </div>
+  </form>
+  <script src="./script.js"></script>
+</body>
+
 </html>

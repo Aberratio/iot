@@ -1,161 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>%NAME%</title>
-  </head>
-  <body>
-    <!-- Navbar -->
-    <div class="navbar">
-      <div class="container_nav flex">
-        <h2 class="logo">
-          <div class="page__section">
-            <nav class="breadcrumb breadcrumb_type" aria-label="Breadcrumb">
-              <ol class="breadcrumb__list r-list">
-                <li class="breadcrumb__group">
-                  <a href="/" class="breadcrumb__point r-link">%NAME%</a>
-                  <span class="breadcrumb__divider" aria-hidden="true">›</span>
-                </li>
-                <li class="breadcrumb__group">
-                  <span class="breadcrumb__point" aria-current="page"
-                    >Ustawienia</span
-                  >
-                </li>
-              </ol>
-            </nav>
-          </div>
-        </h2>
-        <a
-          href="help.html"
-          class="image_btn navbar-btn navbar-btn_question mt-1"
-        >
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>%NAME%</title>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="container_nav flex">
+      <h2 class="logo">
+        <div class="page__section">
+          <nav class="breadcrumb breadcrumb_type" aria-label="Breadcrumb">
+            <ol class="breadcrumb__list r-list">
+              <li class="breadcrumb__group">
+                <a href="/" class="breadcrumb__point r-link">%NAME%</a>
+                <span class="breadcrumb__divider" aria-hidden="true">›</span>
+              </li>
+              <li class="breadcrumb__group">
+                <span class="breadcrumb__point" aria-current="page">Ustawienia</span>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </h2>
+      <a href="/help#config" class="image_btn navbar-btn navbar-btn_question mt-1">
+      </a>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="questionModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-title">Czy jesteś pewien?</div>
+      <form action="/config" method="POST">
+        <div class="modal-container flex">
+          <input id="question" name="question" type="hidden" value="yesNo" />
+          <button type="submit" name="action" value="YES" class="btn btn_medium yes_btn">
+            TAK
+          </button>
+          <button type="submit" name="action" value="NO" class="btn btn_medium no_btn" id="no_btn">
+            NIE
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="infoModal" class="modal" style="display: %NOTIF_VISIBLE%">
+    <div class="modal-content">
+      <div class="modal-title">%NOTIFICATION%</div>
+      <form action="/config" method="POST">
+        <div class="modal-container flex">
+          <button type="submit" name="action" value="NOTIF_OK" class="btn btn_medium ok_btn">
+            OK
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Settings -->
+  <section class="menu">
+    <div class="settings-container">
+      <a href="/display"><button class="btn">Ekran</button></a>
+      <a href="/leds"><button class="btn">Diody</button></a>
+      <a href="/sensors"><button class="btn">Powiadomienia</button></a>
+      <a href="/network"><button class="btn">Połączenie</button></a>
+      <form id="formWithButton" action="/config" method="POST">
+        <button class="btn btn-with-img" onClick="preventDefault" type="submit" name="questionButton" value="SAVE">
+          <img class="image_on_menu_button" src="save.svg" />
+          <div>Zapisz</div>
+          <svg class="image_on_menu_button" role="img"></svg>
+        </button>
+        <button class="btn btn-with-img" onClick="preventDefault" type="submit" name="questionButton" value="LOAD">
+          <img class="image_on_menu_button" src="upload.svg" />
+          <div>Wczytaj</div>
+          <svg class="image_on_menu_button" role="img"></svg>
+        </button>
+        <a href="/update">
+          <button class="btn" name="simpleButton" type="button">
+            Aktualizacja
+          </button>
         </a>
-      </div>
+        <button class="btn" onClick="preventDefault" name="questionButton" type="submit" value="RESET">
+          Uruchom ponownie
+        </button>
+      </form>
+      <p class="version-container">%VERSION%</p>
     </div>
+  </section>
+</body>
 
-    <!-- Modal -->
-    <div id="questionModal" class="modal">
-      <div class="modal-content">
-        <div class="modal-title">Czy jesteś pewien?</div>
-        <form action="/config" method="POST">
-          <div class="modal-container flex">
-            <input id="question" name="question" type="hidden" value="yesNo" />
-            <button
-              type="submit"
-              name="action"
-              value="YES"
-              class="btn btn_medium yes_btn"
-            >
-              TAK
-            </button>
-            <button
-              type="submit"
-              name="action"
-              value="NO"
-              class="btn btn_medium no_btn"
-              id="no_btn"
-            >
-              NIE
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
+<!-- Scripts -->
+<script>
+  var modal = document.getElementById("questionModal");
+  var btns = document.getElementsByName("questionButton");
+  var closeModalButton = document.getElementById("no_btn");
 
-    <div id="infoModal" class="modal" style="display: %NOTIF_VISIBLE%">
-      <div class="modal-content">
-        <div class="modal-title">%NOTIFICATION%</div>
-        <form action="/config" method="POST">
-          <div class="modal-container flex">
-            <button
-              type="submit"
-              name="action"
-              value="NOTIF_OK"
-              class="btn btn_medium ok_btn"
-            >
-              OK
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <!-- Settings -->
-    <section class="menu">
-      <div class="settings-container">
-        <a href="/display"><button class="btn">Ekran</button></a>
-        <a href="/leds"><button class="btn">Diody</button></a>
-        <a href="/sensors"><button class="btn">Powiadomienia</button></a>
-        <a href="/network"><button class="btn">Połączenie</button></a>
-        <form id="formWithButton" action="/config" method="POST">
-          <button
-            class="btn btn-with-img"
-            onClick="preventDefault"
-            type="submit"
-            name="questionButton"
-            value="SAVE"
-          >
-            <img class="image_on_menu_button" src="save.svg" />
-            <div>Zapisz</div>
-            <svg class="image_on_menu_button" role="img"></svg>
-          </button>
-          <button
-            class="btn btn-with-img"
-            onClick="preventDefault"
-            type="submit"
-            name="questionButton"
-            value="LOAD"
-          >
-            <img class="image_on_menu_button" src="upload.svg" />
-            <div>Wczytaj</div>
-            <svg class="image_on_menu_button" role="img"></svg>
-          </button>
-          <a href="/update">
-            <button class="btn" name="simpleButton" type="button">
-              Aktualizacja
-            </button>
-          </a>
-          <button
-            class="btn"
-            onClick="preventDefault"
-            name="questionButton"
-            type="submit"
-            value="RESET"
-          >
-            Uruchom ponownie
-          </button>
-        </form>
-        <p class="version-container">%VERSION%</p>
-      </div>
-    </section>
-  </body>
-
-  <!-- Scripts -->
-  <script>
-    var modal = document.getElementById("questionModal");
-    var btns = document.getElementsByName("questionButton");
-    var closeModalButton = document.getElementById("no_btn");
-
-    btns.forEach((x) => {
-      x.addEventListener("click", function (event) {
-        event.preventDefault();
-      });
-      x.onclick = function () {
-        document.getElementById("question").value = x.value;
-        modal.style.display = "block";
-      };
+  btns.forEach((x) => {
+    x.addEventListener("click", function (event) {
+      event.preventDefault();
     });
+    x.onclick = function () {
+      document.getElementById("question").value = x.value;
+      modal.style.display = "block";
+    };
+  });
 
-    closeModalButton.onclick = function () {
+  closeModalButton.onclick = function () {
+    modal.style.display = "none";
+  };
+  window.onclick = function (event) {
+    if (event.target == modal) {
       modal.style.display = "none";
-    };
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    };
-  </script>
+    }
+  };
+</script>
+
 </html>

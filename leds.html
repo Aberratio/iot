@@ -34,86 +34,83 @@
                 </div>
             </h2>
             <div>
-                <a href="help.html" class="image_btn navbar-btn navbar-btn_question mt-1"></a>
+                <a href="/help#leds" class="image_btn navbar-btn navbar-btn_question mt-1"></a>
             </div>
         </div>
     </div>
 
     <!-- Leds settings -->
     <h1 class="section-name">Ustawienia diod</h1>
-        <form action="/config" method="POST" style="overflow-x:auto;">
-            <fieldset class="fieldset">
-                <legend class="fieldset-legend">Jasność</legend>
-                <table class="table--striped table--medium">
-                    <tr>
-                        <th width="140px">Scenariusz</th>
-                        <th>Wartość</th>
-                        <th width="90px">Akcja</th>
-                    </tr>
-                    <tr>
-                        <td>
+    <form action="/config" method="POST" style="overflow-x:auto;">
+        <fieldset class="fieldset">
+            <legend class="fieldset-legend">Jasność</legend>
+            <table class="table--striped table--medium">
+                <tr>
+                    <th width="140px">Scenariusz</th>
+                    <th>Wartość</th>
+                    <th width="90px">Akcja</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <input type="radio" id="bri_s1" name="bri_scen" value="const" checked>
+                            stała
+                        </div>
+                    </td>
+                    <td>
+                        <div class="tooltip">
+                            <span class="tooltiptext" id="tooltiptext">%BRI%</span>
+                            <input name="bri_const" type="range" min="0" max="100" value="%BRI%" id="myRange"
+                                onchange="rangeValFunc(this.value);">
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            <button type="submit" name="action" value="BRI_TEST" class="btn btn_medium">
+                                Test
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" id="bri_s2" name="bri_scen" value="on_day" disabled>
+                        w dzień
+                    </td>
+                    <td>
+                        <div>
+                            <p class="text-primary form-control__description--left mr-1">
+                                od
+                            </p>
                             <div>
-                                <input type="radio" id="bri_s1" name="bri_scen" value="const" checked>
-                                stała
+                                <input class="form-control__input quantity-input__input input__border--all time-input"
+                                    type="time" value="%BRI_FROM%" name="bri_from" id="bri_from" autocomplete="off" />
                             </div>
-                        </td>
-                        <td>
-                            <div class="tooltip">
-                                <span class="tooltiptext" id="tooltiptext">%BRI%</span>
-                                <input name="bri_const" type="range" min="0" max="100" value="%BRI%" id="myRange"
-                                    onchange="rangeValFunc(this.value);">
-                            </div>
-                        </td>
-                        <td>
+                            <p class="text-primary form-control__description--left mr-1 ml-1">
+                                do
+                            </p>
                             <div>
-                                <button type="submit" name="action" value="BRI_TEST" class="btn btn_medium">
-                                    Test
-                                </button>
+                                <input class="form-control__input quantity-input__input input__border--all time-input"
+                                    type="time" value="%BRI_TO%" name="bri_to" id="bri_to" autocomplete="off" />
                             </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="radio" id="bri_s2" name="bri_scen" value="on_day" disabled>
-                            w dzień
-                        </td>
-                        <td>
-                            <div>
-                                <p class="text-primary form-control__description--left mr-1">
-                                    od
-                                </p>
-                                <div>
-                                    <input
-                                        class="form-control__input quantity-input__input input__border--all time-input"
-                                        type="time" value="%BRI_FROM%" name="bri_from" id="bri_from"
-                                        autocomplete="off" />
-                                </div>
-                                <p class="text-primary form-control__description--left mr-1 ml-1">
-                                    do
-                                </p>
-                                <div>
-                                    <input
-                                        class="form-control__input quantity-input__input input__border--all time-input"
-                                        type="time" value="%BRI_TO%" name="bri_to" id="bri_to" autocomplete="off" />
-                                </div>
-                            </div>
-                        </td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <input type="radio" id="bri_s3" name="bri_scen" value="on_light" disabled>
-                            automatyczna
-                        </td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table>
-            </fieldset>
-            <button type="submit" name="action" value="APPLY" class="btn mt-2">
-                OK
-            </button>
-        </form>
+                        </div>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" id="bri_s3" name="bri_scen" value="on_light" disabled>
+                        automatyczna
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </fieldset>
+        <button type="submit" name="action" value="APPLY" class="btn mt-2">
+            OK
+        </button>
+    </form>
 </body>
 
 </html>

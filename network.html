@@ -10,6 +10,20 @@
 </head>
 
 <body>
+  <!-- Modal -->
+  <div id="infoModal" class="modal" style="display: %NOTIF_VISIBLE%">
+    <div class="modal-content">
+      <div class="modal-title">%NOTIFICATION%</div>
+      <form action="/config" method="POST">
+        <div class="modal-container flex">
+          <button type="submit" name="action" value="NOTIF_OK_NET" class="btn btn_medium ok_btn">
+            OK
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
   <!-- Navbar -->
   <div class="navbar">
     <div class="container_nav flex">
@@ -33,7 +47,7 @@
         </div>
       </h2>
       <div>
-        <a href="help.html" class="image_btn navbar-btn navbar-btn_question mt-1"></a>
+        <a href="/help#network" class="image_btn navbar-btn navbar-btn_question mt-1"></a>
       </div>
     </div>
   </div>

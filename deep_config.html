@@ -38,7 +38,7 @@
           </h2>
           <div>
             <a
-              href="help.html"
+              href="/help#main"
               class="image_btn navbar-btn navbar-btn_question mt-1"
             ></a>
           </div>
@@ -48,8 +48,8 @@
       <h1 class="section-name">Ukryte atrybuty urządzenia:</h2>
         <form action="/deep.config" method="POST" class="example">
 
-            <fieldset>
-                <legend>Atrybuty czujnika światła</legend>
+            <fieldset class="fieldset">
+                <legend class="fieldset-legend">Atrybuty czujnika światła</legend>
                 <table class="table--striped">
                     <tr>
                         <th align="center">Nazwa</th>
@@ -77,8 +77,10 @@
                 </table>
             </fieldset>
 
-            <fieldset>
-                <legend>Aktualizacja</legend>
+            <br/>
+
+            <fieldset class="fieldset">
+                <legend class="fieldset-legend">Aktualizacja</legend>
                 <div class="form-control form-control--big">
                     <input
                       class="form-control__input input__border--all simple-input__input"
@@ -95,6 +97,96 @@
                     >
                   </div>
             </fieldset>
+
+            <br/>
+
+            <fieldset class="fieldset">
+                <legend class="fieldset-legend">Aktywne czujniki</legend>
+
+                <input id="sensors_status" name="sensors_status" type="hidden" value="true" />
+
+                <div class="form-control space-between form-control--small" style="margin-top: 0; width: 444px;">
+                  <p class="text-primary form-control__description--left">
+                    TCS34725 (czujnik światła)
+                  </p>
+                  <label class="switch">
+                    <input class="form-control__input switch__input" name="TCS" type="checkbox" value="true" %TCS% />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+          
+                <div class="form-control space-between form-control--small" style="margin-top: 0; width: 444px;">
+                  <p class="text-primary form-control__description--left">
+                    SCD30 (czujnik CO2, temperatury, wilgotności)
+                  </p>
+                  <label class="switch">
+                    <input class="form-control__input switch__input" name="SCD" type="checkbox" value="true" %SCD% />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+
+                <div class="form-control space-between form-control--small" style="margin-top: 0; width: 444px;">
+                  <p class="text-primary form-control__description--left">
+                    SGP40 (czujnik VOC)
+                  </p>
+                  <label class="switch">
+                    <input class="form-control__input switch__input" name="SGP" type="checkbox" value="true" %SGP% />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+
+                <div class="form-control space-between form-control--small" style="margin-top: 0; width: 444px;">
+                  <p class="text-primary form-control__description--left">
+                    SHT31 (czujnik temperatury, wilgotności)
+                  </p>
+                  <label class="switch">
+                    <input class="form-control__input switch__input" name="SHT" type="checkbox" value="true" %SHT% />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+
+                <div class="form-control space-between form-control--small" style="margin-top: 0; width: 444px;">
+                  <p class="text-primary form-control__description--left">
+                    SHTC3 (czujnik temperatury, wilgotności)
+                  </p>
+                  <label class="switch">
+                    <input class="form-control__input switch__input" name="SHTC" type="checkbox" value="true" %SHTC% />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+
+                <div class="form-control space-between form-control--small" style="margin-top: 0; width: 444px;">
+                  <p class="text-primary form-control__description--left">
+                    SPS30 (czujnik pyłu / czystości powietrza)
+                  </p>
+                  <label class="switch">
+                    <input class="form-control__input switch__input" name="SPS" type="checkbox" value="true" %SPS% />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+
+                <div class="form-control space-between form-control--small" style="margin-top: 0; width: 444px;">
+                  <p class="text-primary form-control__description--left">
+                    Mikrofon
+                  </p>
+                  <label class="switch">
+                    <input class="form-control__input switch__input" name="MIC" type="checkbox" value="true" %MIC% />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+
+                <div class="form-control space-between form-control--small" style="margin-top: 0; width: 444px;">
+                  <p class="text-primary form-control__description--left">
+                    Buzzer
+                  </p>
+                  <label class="switch">
+                    <input class="form-control__input switch__input" name="BUZ" type="checkbox" value="true" %BUZ% />
+                    <span class="slider round"></span>
+                  </label>
+                </div>
+
+
+              </fieldset>
 
             </div>
             <button type="submit" name="action" value="APPLY" class="btn mt-2">
