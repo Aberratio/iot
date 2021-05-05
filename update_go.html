@@ -36,14 +36,30 @@
   </div>
   </div>
 
-  <!-- Network Settings -->
+  <!-- Update Section -->
+  <h1 class="section-name">Aktualizacja oprogramowania</h1>
   <section class="menu">
-    <div class="settings-container">
-      <h1 class="form-name"><b>Aktualizacja oprogramowania:</b></h1>
-      <h2 class="form-name">Plik główny: <span id="progress2"></span></h2>
-      <h2 class="form-name">Pliki dodatkowe: <span id="progress1"></span></h2>
+      <div class="form-control form-control--medium space-between">
+        <p class="text-primary form-control__description--left">Plik główny</p>
+        <span class="progress-container" id="progress2">
+          <progress max="100" value="20" class="progress-component">
+            <div class="progress-bar">
+              <span style="width: 80%">20%</span>
+            </div>
+          </progress>
+        </span>
+      </div>
+      <div class="form-control form-control--medium space-between">
+        <p class="text-primary form-control__description--left">Pliki dodatkowe</p>
+        <span class="progress-container" id="progress1">
+          <progress max="100" value="80" class="progress-component">
+            <div class="progress-bar">
+              <span style="width: 80%">80%</span>
+            </div>
+          </progress>
+        </span>
+      </div>
       <span id="buttonOnFinish"> </span>
-    </div>
   </section>
   <script src="./script.js"></script>
 
