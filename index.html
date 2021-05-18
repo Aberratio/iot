@@ -1,47 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content="59" />
+    <link rel="stylesheet" href="style.css" />
+    <title>%NAME%</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="refresh" content="59" />
-  <link rel="stylesheet" href="style.css" />
-  <title>%NAME%</title>
-</head>
-
-<body>
-  <!-- Navbar -->
-  <div class="navbar">
-    <div class="container_nav flex">
-      <h2 class="logo">%NAME%</h2>
-      <div>
-        <a href="\config" class="image_btn navbar-btn navbar-btn_config mt-1"></a>
-        <a href="/help#main" class="image_btn navbar-btn navbar-btn_question mt-1"></a>
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="container_nav flex">
+        <h2 class="logo">%NAME%</h2>
+        <div>
+          <a
+            href="\config"
+            class="image_btn navbar-btn navbar-btn_config mt-1"
+          ></a>
+          <a
+            href="/help#main"
+            class="image_btn navbar-btn navbar-btn_question mt-1"
+          ></a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Modal -->
-  <div id="infoModal" class="modal" style="display: %NOTIF_VISIBLE%">
-    <div class="modal-content">
-      <div class="modal-title">%NOTIFICATION%</div>
-      <form action="/" method="POST">
-        <div class="modal-container flex">
-          <button type="submit" name="action" value="NOTIF_OK" class="btn btn_medium ok_btn">
-            OK
-          </button>
-        </div>
-      </form>
+    <!-- Alerts -->
+    <div class="alert-container">
+      <div class="alert">
+        <span class="closebtn">&times;</span>
+        <strong>Danger!</strong> Indicates a dangerous or potentially negative
+        action.
+      </div>
+
+      <div class="alert success">
+        <span class="closebtn">&times;</span>
+        <strong>Success!</strong> Indicates a successful or positive action.
+      </div>
+
+      <div class="alert info">
+        <span class="closebtn">&times;</span>
+        <strong>Info!</strong> Indicates a neutral informative change or action.
+      </div>
+
+      <div class="alert warning">
+        <span class="closebtn">&times;</span>
+        <strong>Warning!</strong> Indicates a warning that might need attention.
+      </div>
     </div>
-  </div>
 
-  <!-- Widgets -->
-  <section class="menu">
-    <div class="settings-container">
-      <div class="dashboard">%WIDGETS%</div>
+    <!-- Modal -->
+    <div id="infoModal" class="modal" style="display: %NOTIF_VISIBLE%">
+      <div class="modal-content">
+        <div class="modal-title">%NOTIFICATION%</div>
+        <form action="/" method="POST">
+          <div class="modal-container flex">
+            <button
+              type="submit"
+              name="action"
+              value="NOTIF_OK"
+              class="btn btn_medium ok_btn"
+            >
+              OK
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
-  </section>
-</body>
 
+    <!-- Widgets -->
+    <section class="menu">
+      <div class="settings-container">
+        <div class="dashboard">%WIDGETS%</div>
+      </div>
+    </section>
+
+    <script>
+      var close = document.getElementsByClassName("closebtn");
+      var i;
+
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function () {
+          var div = this.parentElement;
+          div.style.opacity = "0";
+          setTimeout(function () {
+            div.style.display = "none";
+          }, 600);
+        };
+      }
+    </script>
+  </body>
 </html>

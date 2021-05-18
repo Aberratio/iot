@@ -20,6 +20,10 @@
   margin-bottom: 50px !important;
 }
 
+.mb-3 {
+  margin-bottom: 80px !important;
+}
+
 .mr-1 {
   margin-right: 20px !important;
 }
@@ -1484,4 +1488,51 @@ p[data-value]:after {
 
 .progress-container {
   margin: 15px 0;
+}
+
+/*alerts */
+.alert-container {
+  position: absolute;
+  right: 5px;
+  top: 80px;
+}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  opacity: 0.85;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 500px) {
+  .alert-container {
+    right: 0;
+  }
+}
+
+.alert.success {
+  background-color: #04aa6d;
+}
+.alert.info {
+  background-color: #2278bf;
+}
+.alert.warning {
+  background-color: #f7d412;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
 }
