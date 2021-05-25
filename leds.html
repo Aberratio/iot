@@ -42,25 +42,14 @@
     <!-- Leds settings -->
     <h1 class="section-name">Ustawienia diod</h1>
     <form action="/config" method="POST" style="overflow-x:auto;">
-        <fieldset class="fieldset">
+        <fieldset class="fieldset  mb-2">
             <legend class="fieldset-legend">Jasność</legend>
             <table class="table--striped table--medium">
                 <tr>
-                    <th width="140px">Scenariusz</th>
-                    <th>Wartość</th>
-                    <th width="90px">Akcja</th>
-                </tr>
-                <tr>
-                    <td>
-                        <div>
-                            <input type="radio" id="bri_s1" name="bri_scen" value="const" checked>
-                            stała
-                        </div>
-                    </td>
-                    <td>
+                    <td style="width: 75%%;">
                         <div class="tooltip">
                             <span class="tooltiptext" id="tooltiptext">%BRI%</span>
-                            <input name="bri_const" type="range" min="0" max="100" value="%BRI%" id="myRange"
+                            <input name="bri_const" type="range" min="0" max="100" value="%BRI%" id="myRange" style="background-color: var(--secondary-color);"
                                 onchange="rangeValFunc(this.value);">
                         </div>
                     </td>
@@ -72,12 +61,27 @@
                         </div>
                     </td>
                 </tr>
+            </table>
+        </fieldset>
+
+        <fieldset class="fieldset mb-2">
+            <legend class="fieldset-legend">Scenariusz</legend>
+            <table class="table--striped table--medium">
                 <tr>
                     <td>
-                        <input type="radio" id="bri_s2" name="bri_scen" value="on_day" disabled>
-                        w dzień
+                        <div>
+                            <input type="radio" id="bri_s1" name="bri_scen" value="always" %LEDS_ALWAYS%>
+                            zawsze
+                        </div>
                     </td>
+                    <td></td>
+                </tr>
+                <tr>
                     <td>
+                        <input type="radio" id="bri_s2" name="bri_scen" value="on_time" %LEDS_ON_TIME%>
+                        w godzinach
+                    </td>
+                    <td style="width: 75%%;">
                         <div>
                             <p class="text-primary form-control__description--left mr-1">
                                 od
@@ -95,14 +99,12 @@
                             </div>
                         </div>
                     </td>
-                    <td></td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="radio" id="bri_s3" name="bri_scen" value="on_light" disabled>
-                        automatyczna
+                        <input type="radio" id="bri_s3" name="bri_scen" value="on_light" %LEDS_ON_LIGHT%>
+                        gdy jasno
                     </td>
-                    <td></td>
                     <td></td>
                 </tr>
             </table>

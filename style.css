@@ -1378,7 +1378,7 @@ progress[value] {
   appearance: none;
   border: none;
   height: 20px;
-  background-color: whiteSmoke;
+  background-color: var(--secondary-color);
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
@@ -1389,7 +1389,8 @@ progress[value] {
 }
 
 progress[value]::-webkit-progress-bar {
-  background-color: whiteSmoke;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
   border-radius: 3px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5) inset;
 }
@@ -1419,16 +1420,6 @@ progress[value]::-webkit-progress-value:after {
 }
 
 progress[value]::-moz-progress-bar {
-  background-image: -moz-linear-gradient(
-      135deg,
-      transparent,
-      transparent 33%,
-      rgba(0, 0, 0, 0.1) 33%,
-      rgba(0, 0, 0, 0.1) 66%,
-      transparent 66%
-    ),
-    -moz-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
-    -moz-linear-gradient(left, var(--primary-color), var(--primary-color), var(--secondary-color));
   background-size: 35px 20px, 100% 100%, 100% 100%;
   border-radius: 3px;
 }
@@ -1456,34 +1447,6 @@ p[data-value]:after {
   content: attr(data-value) "%";
   position: absolute;
   right: 0;
-}
-
-.progress-component::-webkit-progress-value,
-.python::-webkit-progress-value {
-  background-image: -webkit-linear-gradient(
-      135deg,
-      transparent,
-      transparent 33%,
-      rgba(0, 0, 0, 0.1) 33%,
-      rgba(0, 0, 0, 0.1) 66%,
-      transparent 66%
-    ),
-    -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
-    -webkit-linear-gradient(left, var(--primary-color), var(--secondary-color));
-}
-
-.progress-component::-moz-progress-bar,
-.php::-moz-progress-bar {
-  background-image: -moz-linear-gradient(
-      135deg,
-      transparent,
-      transparent 33%,
-      rgba(0, 0, 0, 0.1) 33%,
-      rgba(0, 0, 0, 0.1) 66%,
-      transparent 66%
-    ),
-    -moz-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
-    -moz-linear-gradient(left, var(--primary-color), var(--secondary-color));
 }
 
 .progress-container {
