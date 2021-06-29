@@ -100,10 +100,16 @@
       </div>
       <div style="clear: both"></div>
       <div class="footer">
+        <input id="scrollPosition" value="%scroll_pos%" type="text" hidden />
         <button type="submit" name="action" value="APPLY" class="btn">
           OK
         </button>
       </div>
     </form>
   </body>
+  <script>
+    window.addEventListener("scroll", (event) => {
+      document.getElementById("scrollPosition").value = this.scrollY;
+    });
+  </script>
 </html>
