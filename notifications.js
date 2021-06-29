@@ -118,6 +118,7 @@ function httpGetAsync(theUrl, callback) {
 }
 window.onload = function () {
   function checkStates() {
+    document.getElementById("msgbox-area").innerHTML = "";
     httpGetAsync("/notification", (x) => {
       createNotifications(x);
       if (Notification.permission === "granted") {
@@ -147,5 +148,6 @@ window.onload = function () {
     //createNotification(obj.notification[0].message);
     //createNotification(obj.notification[1].message);
   }
+  checkStates();
   setInterval(checkStates, 20000);
 };
